@@ -1,0 +1,987 @@
+html {
+	/*background-image: url("../images/hexgrid.png"), linear-gradient(to right, black, #1e1e33, black);*/
+	background-image: url("../images/hexgrid.png"), linear-gradient(to right, black, #5655a8 , black);
+	font-family: arial, sans-serif;
+}
+
+/* #6C6BD0 */
+
+* {
+    box-sizing: border-box;
+}
+body {
+	width: 95%;
+	margin: 1rem auto;
+	max-width: 1280px;
+	display: block;
+	font-family: arial, Times New Roman, Times, serif;
+	font-size: 1.2rem;
+	color: #cdd2ea;
+    text-shadow: 0 0 2px black;
+}
+hr {
+	width: 50%;
+	border: 2px solid #cdd2ea;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+img {
+	width: auto;
+	height: 15rem;
+	text-align: center;
+	border: solid 4px #cdd2ea;
+	border-radius: 20px;
+}
+#decoration-left img {
+	width: 20rem;
+	height: auto;
+	background: transparent;
+	border: none;
+	position: fixed;
+	right: 87%;
+	top: 0;
+	z-index: -10;
+}
+#decoration-right img {
+	width: 25rem;
+	height: auto;
+	background: transparent;
+	border: none;
+	position: fixed;
+	left: 85%;
+	top: 0;
+	z-index: -10;
+}
+
+#homepage img {
+	text-align: center;
+	height: 15rem;
+	border: solid 10px #cdd2ea;
+	border-radius: 15rem;
+}
+
+figure {
+	text-align: center;
+	font-weight: bold;
+}
+figure a {
+	background-color: rgba(0,0,0,0);
+}
+figure a:focus {
+	background-color: rgba(0,0,0,0);
+}
+
+figcaption a {
+	font-family: Beijing SSI, arial, san-serif;
+	color: #6C6BD0;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	text-shadow: none;
+	padding-left: 4px;
+	padding-right: 4px;
+	text-decoration: none;
+	background-color: #cdd2ea;
+	margin: 0;
+	border-radius: 4px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center; 
+	position: fixed;
+	top: 0;
+	background: radial-gradient(#6C6BD0, black);
+	margin: 0 auto;
+	margin-left: 0px;
+	border: solid 4px #cdd2ea;
+	border-radius: 20px;
+	width: 95%;
+	max-width: 1280px;
+/* USE THIS FOR DISABLING HEADER FOR EDITING TEXT, Also enable colors below! */
+/*	display: none; */
+}
+.nav {
+	padding: 1px;
+}
+.nav ul {
+	list-style-position: inside;
+	text-align: center;
+	padding-left: 0rem;
+	padding-right: 0rem;
+	margin: .2rem;
+	margin-top: 0rem;
+	margin-left: 0;
+}
+.nav ul li {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 2px;
+}
+.nav ul div{
+	display: inline-block;
+	position: relative;
+	margin-bottom: 2px;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+	font-family: Beijing SSI, arial, san-serif;
+	color: #6C6BD0;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	text-shadow: none;
+	padding-left: 4px;
+	padding-right: 4px;
+	text-decoration: none;
+	background-color: #cdd2ea;
+	margin: 0;
+	border-radius: 4px;
+    cursor: pointer;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    text-align: left;
+    	font-size: 1.2rem;
+    background-color: #cdd2ea;
+    min-width: 20rem;
+    margin-top: 0rem;
+    margin-left: 0rem;
+	padding-bottom: .3rem;
+	border: solid 4px #cdd2ea;
+	border-radius: 10px;
+    z-index: 1;
+}
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+	font-family: Beijing SSI, arial, san-serif;
+	color: #6C6BD0;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	text-shadow: none;
+	background-color: #cdd2ea;
+    display: block;
+}
+.dropdown-content ul {
+	margin: 0;
+		margin-bottom: 1rem;
+}
+.dropdown-content li {
+	margin-top: 0rem;
+	margin-bottom: 1rem;
+	margin-left: .5rem;
+}
+
+.dropdown-content li a:hover {
+  	color: red;
+  	cursor: pointer;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    transition-duration: 0.6s;
+}
+/* Change the attributes of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    color: red;
+}
+
+a {
+	font-family: Beijing SSI, arial, san-serif;
+	color: #6C6BD0;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	text-shadow: none;
+	padding-left: 4px;
+	padding-right: 4px;
+	text-decoration: none;
+	background-color: #cdd2ea;
+	margin: 0;
+	border-radius: 4px;
+}
+a:hover {
+  	color: red;
+  	cursor: pointer;
+}
+a:focus {
+	outline-color: black;
+	color: #cdd2ea;
+	background-color: #6C6BD0;
+}
+a:visited {
+	font-family: Beijing SSI, arial, san-serif;
+	color: #6C6BD0;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	text-shadow: none;
+	padding-left: 4px;
+	padding-right: 4px;
+	text-decoration: none;
+	background-color: #cdd2ea;
+	margin: 0;
+	border-radius: 4px;
+}
+
+.nav h3 {
+	color: red;
+}
+
+.title {
+	text-align: center;
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-right: 0rem;
+}
+.title h3 {
+	text-align: center;
+	color: red;
+}
+
+#logo a {
+	padding-left: 0;
+	background-color: rgba(0,0,0,0);
+}
+#logo a:focus {
+	background-color: rgba(0,0,0,0);
+}
+#logo img {
+	width: auto;
+	height: 7.3rem;
+	margin: -4px;
+	margin-bottom: -10px;
+	border: solid 4px #cdd2ea;
+	border-radius: 20px;
+}
+
+table {
+	width: 100%;
+	border: solid 4px #cdd2ea;
+	border-radius: 20px;
+}
+
+thead th {
+		background: radial-gradient(#6C6BD0, black);
+					background: radial-gradient(black, #6C6BD0);
+
+}
+
+td, th {
+	text-align: center;
+	color: #cdd2ea;
+	padding: 10px 20px;
+	/*	border: solid 4px #cdd2ea;
+	border-radius: 20px;  
+					background: radial-gradient(black, #6C6BD0);
+
+		background: radial-gradient(#6C6BD0, black);
+		*/
+}
+
+th {
+	border-radius: 20px;  
+
+}
+
+td {
+	text-align: center;
+  	border-radius: 20px;  
+
+}
+
+
+
+tr:nth-child(even) td {
+}
+tr:nth-child(odd) td {
+}
+caption {
+  padding: 10px;
+}
+
+
+.table {
+	line-height: 1.4rem;
+	margin-top: 0rem;
+	margin-bottom: 6rem;
+}
+.table img {
+	float: left;
+	margin-left: 0;
+	margin-right: 2rem;
+	margin-bottom: 1rem;
+}
+.table ul {
+	padding-top: 0.5rem;
+	padding-left: 0;
+}
+.table ul li {
+	margin-bottom: .3rem;
+}
+.table a {
+	padding: .1rem 4px;
+}
+.table a:hover {
+	color: red;
+}
+.table a:focus {
+	outline-color: black;
+	color: #cdd2ea;
+	background-color: #6C6BD0;
+}
+
+/*cheat code to prevent stuff below from bleeding into float area*/
+.cf:before,.cf:after {
+	content: " "; 
+	display: table;
+}
+.cf:after {
+	clear: both;
+}
+.cf {
+	*zoom: 1;
+}
+
+.quote {
+	text-align: center;
+	font-family: Times New Roman, Times, serif;
+	font-size: 1.7rem;
+	font-weight: bold;
+	font-style: italic;
+}
+.speaker {
+	text-align: right;
+	font-family: Times New Roman, Times, serif;
+	font-size: 1.7rem;
+	font-weight: bold;
+	margin-right: 6rem;
+}
+
+.lead {
+	height: 3.9rem;
+	width: auto;
+	float: left;
+	padding-right: 10px;
+	padding-bottom: .5rem;
+	padding-top: 0rem;
+	border: none;
+	border-radius: 0px;
+}
+.lead img {
+	border: none;
+}
+
+h1 {
+	text-align: center;
+	font-family: CCTimelordSolid, Russo One, arial, sans-serif;
+	font-weight: bolder;
+	color: #5A6EBC;
+	font-size: 3.5rem;
+	line-height: 4rem;
+	background: radial-gradient(black, black, #6C6BD0);
+	text-shadow: 0 0 50px rgba(0,0,0, 1);
+	padding-top: 1rem;
+	padding-bottom: .5rem;
+	margin-top: 0;
+	margin-bottom: 0;
+	border: solid 4px #cdd2ea;
+	border-radius: 20px;
+}
+h2 {
+	text-align: left;
+	font-family: Beijing SSI, Sarpanch, Times New Roman, Times, san-serif;
+	font-weight: bolder;
+	color: #cdd2ea;
+	font-size: 2rem;
+	text-shadow: 0 0 100px rgba(0,0,0, 1);
+	margin-top: 0rem;
+	margin-left: 0rem;
+	padding-top: .8rem;
+	border: none;
+}
+
+h3 {
+	text-align: center;
+	font-family: Beijing SSI, arial, san-serif;
+	color: red;
+	text-transform: uppercase;
+	font-size: 1.2rem;
+	text-shadow: none;
+	padding-left: 4px;
+	padding-right: 4px;
+	text-decoration: none;
+	background-color: #cdd2ea;
+	margin: 0;
+	border-radius: 4px;
+}
+p {
+  	font-family: arial, Times, serif;
+  	font-size: 1.2rem;
+  	color: #cdd2ea;
+  	text-shadow: 0 0 3px black;
+}
+.main {
+	margin: 0 6rem 0 6rem;
+	font-family: arial, Times, serif;
+  	font-size: 1.2rem;
+  	line-height: 1.8rem;
+  	color: #cdd2ea;
+  	text-shadow: 0 0 3px black;
+}
+.article {
+	margin-bottom: 2rem;
+}
+.section {
+	margin: 0 6rem 1rem 6rem;
+}
+.box {
+	margin: 1rem auto;
+	max-width: 1280px;
+	margin-right: 0;
+	padding: 1rem 2rem;
+	font-family: arial, sans-serif;
+	font-size: 1.2rem;
+  	text-shadow: 0 0 3px black;
+	color: #cdd2ea;
+	background: radial-gradient(#6C6BD0, black);
+	border: solid 4px #cdd2ea;
+	border-radius: 20px;
+}
+.box li {
+	padding-bottom: .5rem;
+}
+.indexlinks {
+	padding-top: 1rem;
+}
+.indexlinks a {
+	/*all: unset;*/
+	background: none;
+	text-align: left;
+	font-family: Beijing SSI, Sarpanch, Times New Roman, Times, serif;
+	font-weight: bolder;
+	color: #cdd2ea;
+	font-size: 2rem;
+	text-shadow: 0 0 100px rgba(0,0,0, 1);
+	margin-top: 0rem;
+	margin-left: 0rem;
+	padding-top: .8rem;
+	padding-bottom: 0;
+	border: none;
+}
+.indexlinks a:hover {
+  	color: red;
+  	cursor: pointer;
+}
+.indexlinks img {
+	margin-bottom: 0rem;
+	margin-top: -.9rem;
+}
+
+
+.active .A-tv {
+	background: black;
+	color: red;
+}
+.active .A-audiobook {
+	background: black;
+	color: #ff6600
+}
+.active .A-licensed {
+	background: black;
+	color:#ffff00;
+}
+.active .A-game {
+	background: black;
+	color: #33ff33;
+}
+.active .A-infinity {
+	background: black;
+	color: #33ccff;
+}
+.active .A-alternate {
+	background: black;
+	color: #cc33cc;
+}
+.active .A-notbbc {
+	background: black;
+	color: #999999;
+}
+.active .A-fanon {
+	background: black;
+	color: white;
+}
+
+.A-tv::selection {
+  background: darkblue;
+  color: red;
+  text-shadow:none;
+}
+.A-tv::-webkit-selection {
+  background: darkblue;
+  color: red;
+  text-shadow:none;
+}
+.A-tv::-moz-selection {
+  background: darkblue;
+  color: red;
+  text-shadow:none;
+}
+
+.A-audiobook::selection {
+  background: darkblue;
+  color: #ff6600;
+  text-shadow:none;
+}
+.A-audiobook::-webkit-selection {
+  background: darkblue;
+  color: #ff6600;
+  text-shadow:none;
+}
+.A-audiobook::-moz-selection {
+  background: darkblue;
+  color: #ff6600;
+  text-shadow:none;
+}
+
+.A-licensed::selection {
+  background: darkblue;
+  color: #ffff00;
+  text-shadow:none;
+}
+.A-licensed::-webkit-selection {
+  background: darkblue;
+  color: #ffff00;
+  text-shadow:none;
+}
+.A-licensed::-moz-selection {
+  background: darkblue;
+  color: #ffff00;
+  text-shadow:none;
+}
+
+.A-game::selection {
+  background: darkblue;
+  color: #33ff33;
+  text-shadow:none;
+}
+.A-game::-webkit-selection {
+  background: darkblue;
+  color: #33ff33;
+  text-shadow:none;
+}
+.A-game::-moz-selection {
+  background: darkblue;
+  color: #33ff33;
+  text-shadow:none;
+}
+
+.A-infinity::selection {
+  background: darkblue;
+  color: #33ccff;
+  text-shadow:none;
+}
+.A-infinity::-webkit-selection {
+  background: darkblue;
+  color: #33ccff;
+  text-shadow:none;
+}
+.A-infinity::-moz-selection {
+  background: darkblue;
+  color: #33ccff;
+  text-shadow:none;
+}
+
+.A-alternate::selection {
+  background: darkblue;
+  color: #cc33cc;
+  text-shadow:none;
+}
+.A-alternate::-webkit-selection {
+  background: darkblue;
+  color: #cc33cc;
+  text-shadow:none;
+}
+.A-alternate::-moz-selection {
+  background: darkblue;
+  color: #cc33cc;
+  text-shadow:none;
+}
+
+
+.A-notbbc::selection {
+  background: darkblue;
+  color: #999999;
+  text-shadow:none;
+}
+.A-notbbc::-webkit-selection {
+  background: darkblue;
+  color: #999999;
+  text-shadow:none;
+}
+.A-notbbc::-moz-selection {
+  background: darkblue;
+  color: #999999;
+  text-shadow:none;
+}
+
+
+.A-fanon::selection {
+  background: darkblue;
+  color: white;
+  text-shadow:none;
+}
+.A-fanon::-webkit-selection {
+  background: darkblue;
+  color: white;
+  text-shadow:none;
+}
+.A-fanon::-moz-selection {
+  background: darkblue;
+  color: white;
+  text-shadow:none;
+}
+
+.innerlink .dropdown-content {
+	background: radial-gradient(#6C6BD0, black);
+}
+
+.innerlink .A-tv {
+  color: red;
+}
+.innerlink .A-audiobook {
+	color: #ff6600
+}
+.innerlink .A-licensed {
+	color:#ffff00;
+}
+.innerlink .A-game {
+	color: #33ff33;
+}
+.innerlink .A-infinity {
+	color: #33ccff;
+}
+.innerlink .A-alternate {
+	color: #cc33cc;
+}
+.innerlink .A-notbbc {
+	color: #999999;
+}
+.innerlink .A-fanon {
+	color: white;
+}
+#laws ol {
+	list-style-type:upper-roman;
+}
+#laws ol ol {
+	list-style-type:upper-alpha;
+}
+#laws ol ol ol {
+	list-style-type:decimal;
+}
+
+#biology img {
+	height: 20rem;
+	text-align: left;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#culture {
+	padding-top: 0;
+	margin-top: -4.2rem;
+}
+
+#culture img {
+	width: 17.5rem;
+	text-align: left;
+	margin-top: 0;
+	margin-left: 0;
+		padding-top: 0;
+	padding-left: 0;
+}
+
+
+#government img {
+	height: 22rem;
+	text-align: left;
+	margin-left: 0;
+	padding-left: 0;
+}
+#darktimes img {
+	height: 20rem;
+	text-align: left;
+	margin-left: 0;
+	padding-left: 0;
+}
+#legend img {
+	height: 20rem;
+	text-align: left;
+	margin-left: 0;
+	padding-left: 0;
+}
+#middle img {
+	height: 15rem;
+	text-align: left;
+	margin-left: 0;
+	padding-left: 0;
+}
+#preclassic img {
+	height: 22rem;
+	text-align: left;
+	margin-left: 0;
+	padding-left: 0;
+}
+#classic img {
+	height: 23rem;
+	text-align: left;
+	margin-left: 0;
+	padding-left: 0;
+}
+#prewar img {
+	height: 18rem;
+	text-align: left;
+	margin-left: 0;
+	padding-left: 0;
+}
+#postwar img {
+	height: 23rem;
+	text-align: left;
+	margin-left: 0;
+	padding-left: 0;
+}
+#craig li {
+	padding-bottom: .5rem;
+}
+/*#lifespan  li {
+	padding-bottom: .5rem;
+}*/
+#presidentlist li {
+	padding-bottom: .5rem;
+}
+.gallifreys {
+	margin: 0 -10px;
+	padding: 0;
+	list-style: none;
+	display: flex;
+}
+.gallifreys li, .center {
+	margin: 1rem auto;
+	margin: 0;
+	padding: 1rem .5rem;
+	flex: 1 1 900px;
+	font-family: arial, sans-serif;
+	font-size: 1.2rem;
+  	text-shadow: 0 0 3px black;
+	color: #cdd2ea;
+	background: radial-gradient(#6C6BD0, black);
+	border: solid 4px #cdd2ea;
+	border-radius: 20px;
+}
+.gallifreys li li{
+	margin: 0;
+	padding: 0;
+	background: none;
+	border: none;
+}
+
+#construction h2 {
+	text-align: center;
+}
+#construction img {
+	height: 36rem;
+	text-align: center;
+}
+
+/* Activate the classes below for editing in Kompozer.  Also de-activate the Nav */
+/*
+.A-tv {
+	background: black;
+	color: red;
+}
+.A-audiobook {
+	background: black;
+	color: #ff6600
+}
+.A-licensed {
+	background: black;
+	color:#ffff00;
+}
+.A-game {
+	background: black;
+	color: #33ff33;
+}
+.A-infinity {
+	background: black;
+	color: #33ccff;
+}
+.A-alternate {
+	background: black;
+	color: #cc33cc;
+}
+.A-notbbc {
+	background: black;
+	color: #999999;
+}
+.A-fanon {
+	background: black;
+	color: white;
+}
+*/
+
+#footer {
+	margin: 1rem auto;
+	max-width: 1280px;
+	margin-right: 0;
+	padding: 1rem 2rem;
+	font-family: arial, sans-serif;
+	font-size: 1.2rem;
+  	text-shadow: 0 0 3px black;
+	color: #cdd2ea;
+	background: radial-gradient(#6C6BD0, black);
+	border: solid 4px #cdd2ea;
+	border-radius: 20px;
+}
+
+#hero {
+	text-align: left;
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+#hero a {
+	background-color: rgba(0,0,0,0);
+	padding-left: 0px;
+}
+#hero img {
+	width: 100%;
+	height: auto;
+	border: solid 4px #cdd2ea;
+	border-radius: 20px;
+}
+#otherstide ul {
+  list-style-type: none;
+}
+#key {
+	margin: 1rem auto;
+	max-width: 1280px;
+	margin-right: 0;
+	padding: 1rem 2rem;
+	font-family: arial, sans-serif;
+	font-size: 1.2rem;
+	text-shadow: 0 0 3px black;
+}
+
+/* This is the class tag for overides nessecary to make the page look good on ipad things */
+.mobile  {
+}
+
+.mobile .A-tv {
+	background: black;
+	color: red;
+}
+.mobile .A-audiobook {
+	background: black;
+	color: #ff6600
+}
+.mobile .A-licensed {
+	background: black;
+	color:#ffff00;
+}
+.mobile .A-game {
+	background: black;
+	color: #33ff33;
+}
+.mobile .A-infinity {
+	background: black;
+	color: #33ccff;
+}
+.mobile .A-alternate {
+	background: black;
+	color: #cc33cc;
+}
+.mobile .A-notbbc {
+	background: black;
+	color: #999999;
+}
+.mobile .A-fanon {
+	background: black;
+	color: white;
+}
+
+
+/* This is the media modifier for overrides nessecary to make the page look good on small screen [like cell phones] */
+
+@media (max-width: 900px) {
+	body {
+	}
+	.nav h3 {
+		display: none;
+	}
+	.main {
+		width: 100%;
+		margin: 0;
+	}
+	#decoration-right {
+		display: none;
+	}
+	#decoration-left {
+		display: none;
+	}
+ 	#logo {
+ 		display: none;
+ 	}
+ 	.A-tv {
+		background: black;
+		color: red;
+	}
+	.A-audiobook {
+		background: black;
+		color: #ff6600
+	}
+	.A-licensed {
+		background: black;
+		color:#ffff00;
+	}
+	.A-game {
+		background: black;
+		color: #33ff33;
+	}
+	.A-infinity {
+		background: black;
+		color: #33ccff;
+	}
+	.A-alternate {
+		background: black;
+		color: #cc33cc;
+	}
+	.A-notbbc {
+		background: black;
+		color: #999999;
+	}
+	.A-fanon {
+		background: black;
+		color: white;
+	}
+}
+@media (max-width: 600px) {
+	body {
+		width: 100%;
+		margin: .1rem;
+		margin-right: 0rem;
+		align-items: center; 
+	}
+	.main {
+		width: 100%;
+		margin: 0;
+	}
+ 	h1 {
+ 		font-size: 2rem;
+ 	}
+ 	.section {
+		margin: 0 .2rem 1rem .4rem;
+	}
+}
+
