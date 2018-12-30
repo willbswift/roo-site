@@ -16,4 +16,4 @@ If you have any doubts as to the validity of the data presented, just use your m
 
 ![alt text](/Image3.jpg?raw=true "With Sources displayed") 
 
-- William B. Swift (creator and fan~!)
+- William B. Swift (creator and fan!)

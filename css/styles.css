@@ -99,7 +99,7 @@ figcaption a {
 	width: 95%;
 	max-width: 1280px;
 /* USE THIS FOR DISABLING HEADER FOR EDITING TEXT, Also enable colors below! */
-/*	display: none; */
+	/* display: none; */
 }
 .nav {
 	padding: 1px;
@@ -124,6 +124,10 @@ figcaption a {
 	margin-bottom: 2px;
 }
 
+.noshow a {
+	display: none;
+}
+
 /* Style The Dropdown Button */
 .dropbtn {
 	font-family: Beijing SSI, arial, san-serif;
@@ -144,7 +148,7 @@ figcaption a {
     display: none;
     position: absolute;
     text-align: left;
-    	font-size: 1.2rem;
+    font-size: 1.2rem;
     background-color: #cdd2ea;
     min-width: 20rem;
     margin-top: 0rem;
@@ -168,12 +172,12 @@ figcaption a {
 }
 .dropdown-content ul {
 	margin: 0;
-		margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 .dropdown-content li {
 	margin-top: 0rem;
 	margin-bottom: 1rem;
-	margin-left: .5rem;
+	margin-left: 0rem;
 }
 
 .dropdown-content li a:hover {
@@ -917,8 +921,27 @@ p {
 @media (max-width: 900px) {
 	body {
 	}
-	.nav h3 {
+	.header {
 		display: none;
+		border: none;
+	}
+	.noshow {
+		position: fixed;
+		top: 0%;
+		left: 10%;
+		align-items: center; 
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+	.noshow a {
+		display: inline-block;
+		text-align: center;
+		font-size: 1.8rem;
+	}
+	.noshow a:hover {
+	  	color: red;
+	  	cursor: pointer;
 	}
 	.main {
 		width: 100%;
