@@ -99,7 +99,7 @@ figcaption a {
 	width: 95%;
 	max-width: 1280px;
 /* USE THIS FOR DISABLING HEADER FOR EDITING TEXT, Also enable colors below! */
-	/* display: none; */
+/*	display: none; */
 }
 .nav {
 	padding: 1px;
