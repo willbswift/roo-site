@@ -99,7 +99,7 @@ figcaption a {
 	width: 95%;
 	max-width: 1280px;
 /* USE THIS FOR DISABLING HEADER FOR EDITING TEXT, Also enable colors below! */
-	/* display: none; */
+	display: none; */
 }
 .nav {
 	padding: 1px;
@@ -801,7 +801,7 @@ p {
 }
 
 /* Activate the classes below for editing in Kompozer.  Also de-activate the Nav */
-/*
+
 .A-tv {
 	background: black;
 	color: red;
@@ -880,8 +880,8 @@ p {
 
 /* This is the class tag for overides nessecary to make the page look good on ipad things */
 .mobile  {
+	background: black;
 }
-
 .mobile .A-tv {
 	background: black;
 	color: red;
@@ -995,6 +995,7 @@ p {
 		margin: .1rem;
 		margin-right: 0rem;
 		align-items: center; 
+		background: black;
 	}
 	.main {
 		width: 100%;
