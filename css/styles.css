@@ -282,8 +282,7 @@ td, th {
 	padding: 10px 20px;
 	/*	border: solid 4px #cdd2ea;
 	border-radius: 20px;  
-					background: radial-gradient(black, #6C6BD0);
-
+		background: radial-gradient(black, #6C6BD0);
 		background: radial-gradient(#6C6BD0, black);
 		*/
 }
@@ -800,7 +799,7 @@ p {
 }
 
 /* Activate the classes below for editing in Kompozer.  Also activate wide screen Body & de-activate the Nav */
-/*
+ /*
 .A-tv {
 	background: black;
 	color: red;
