@@ -19,7 +19,7 @@ body {
 	color: #cdd2ea;
 	text-shadow: 0 0 2px black;
 /* USE THE LINE OF TEXT BELOW TO MAKE IT EASY TO EDIT ON KOMPOZER. 321  ALSO SEE NAV AND COLORS BELOW*/
-/*	  max-width: 2280px;  */ 
+	  max-width: 2280px;  */ 
 }
 hr {
 	width: 50%;
@@ -102,7 +102,7 @@ figcaption a {
 	width: 95%;
 	max-width: 1280px;
 /* USE THIS FOR DISABLING HEADER FOR EDITING TEXT, 321 Also enable wide screen Body above and Colors below! */
-/*	  display: none;  */
+	  display: none;  */
 }
 .nav {
 	padding: 1px;
@@ -283,8 +283,9 @@ td, th {
 	padding: 10px 20px;
 	/*	border: solid 4px #cdd2ea;
 	border-radius: 20px;  
-	background: radial-gradient(black, #6C6BD0);
-	background: radial-gradient(#6C6BD0, black);
+					background: radial-gradient(black, #6C6BD0);
+
+		background: radial-gradient(#6C6BD0, black);
 		*/
 }
 
@@ -800,7 +801,7 @@ p {
 }
 
 /* Activate the classes below for editing in Kompozer. 321 Also activate wide screen Body & de-activate the Nav */
- /*
+ 
 .A-tv {
 	background: black;
 	color: red;
