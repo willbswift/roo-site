@@ -12,174 +12,26 @@
 	<style>
 	</style></head>
 <body>
-	<script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script> 
 		var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android)/);
 		if (isMobile != null) {
 			document.body.className += ' ' + 'mobile';
 		}
-	</script>
-		<div class="noshow">
-			<a href="index.html">Return To Master Index</a>
-		</div>
-	<div class="header">
-		<div id="logo">
-			<a href="index.html">
-				<img src="images/BannerNEW.png" title="Doctor Who Rassilon Omega and that Other Guy" alt="Doctor Who Rassilon, Omega, and that Other Guy">
-			</a>
-		</div>
-		<div class="nav">
-			<ul>
-				<li>
-					<a href="index.html">Home</a>
-				</li>
-				<div class="dropdown">
-					<li class="dropbtn">Gallifreyan Data</li>
-					<ul class="dropdown-content">
-						<li>
-							<a href="roogallifrey.html">Planet Gallifrey</a>
-						</li>
-						<br>
-						<li>
-							<a href="roobiology.html">Gallifreyan Biology</a>
-						</li>
-						<br>
-						<li>
-							<a href="roolifedeath.html">Life on Gallifrey</a>
-						</li>
-						<br>
-						<li>
-							<a href="roogovernment.html">Government</a>
-						</li>
-					</ul>
-				</div>
-				<div class="dropdown">
-					<li class="dropbtn">Time Lord Data</li>
-					<ul class="dropdown-content">
-						<li>
-							<a href="rooweb.html">The Web of Time</a>
-						</li>
-						<br>
-						<li>
-							<a href="rootimelord.html">Time Lords</a>
-						</li>
-						<br>
-						<li>
-							<a href="https://docs.google.com/file/d/0B6zjenFzzQn1MF9xeHNNS1M1akU/edit?pli=1" target="_blank">TARDIS Technical Index</a>
-						</li>
-					</ul>
-				</div>
-				<div class="dropdown">
-					<li class="dropbtn">History of the Time Lords</li>
-					<ul class="dropdown-content">
-						<li>
-							<a href="rootimeline1.html">I The Dark Time</a>
-						</li>
-						<br>
-						<li>
-							<a href="rootimeline2.html">II Time of Legend</a>
-						</li>
-						<br>
-						<li>
-							<a href="rootimeline3.html">III Middle Gallifrey</a>
-						</li>
-						<br>
-						<li>
-							<a href="rootimeline4.html">IV Pre-Classical Gallifrey</a>
-						</li>
-						<br>
-						<li>
-							<a href="rootimeline5.html">V Classical Gallifrey</a>
-						</li>
-						<br>
-						<li>
-							<a href="rootimeline6.html">VI Pre-War Gallifrey</a>
-						</li>
-						<br>
-						<li>
-							<a href="rootimeline7.html">VII The Time War In Heaven</a>
-						</li>
-						<br>
-						<li>
-							<a href="rootimeline8.html">VIII Post Gallifrey</a>
-						</li>
-					</ul>
-				</div>
-				<li>
-					<a href="#table">Top / Table of Contents</a>
-				</li>
-				<div class="dropdown">
-					<li class="dropbtn">Podcast / Misc</li>
-					<ul class="dropdown-content">
-						<li>
-							<a href="roopodcast.html">My Youtube Podcast</a>
-						</li>
-						<br>
-						<li>
-							<a href="roochildren.html">Children that Time Forgot</a>
-						</li>
-						<br>
-						<li>
-							<a href="rooappendix.html">Appendix</a>
-						</li>
-						<br>
-						<li>
-							<a href="rooconstruction.html">Human History</a>
-						</li>
-						<br>
-						<li>
-							<a href="rooconstruction.html">Dalek Biology &amp; Culture</a>
-						</li>
-						<br>
-						<li>
-							<a href="rooconstruction.html">Dalek Timeline</a>
-						</li>
-					</ul>
-				</div>
-				<li>
-					<a href="index.html#key">Sources</a>
-				</li>
-				<div class="innerlink">
-					<div class="dropdown">
-						<li class="dropbtn">Quick Color Key</li>
-						<ul class="dropdown-content">
-							<li class="A-tv">TV Episodes and shorts</li>
-							<br>
-							<li class="A-audiobook">Novels and Audio Dramas sources</li>
-							<br>
-							<li class="A-licensed">Comics and other Licensed reference sources</li>
-							<br>
-							<li class="A-game">Games and Behind-the-Scenes sources</li>
-							<br>
-							<li class="A-infinity">Info from the novel The Infinity Doctors</li>
-							<br>
-							<li class="A-alternate">Alternate timelines stories</li>
-							<br>
-							<li class="A-notbbc">Licensed but non-BBC spin-offs</li>
-							<br>
-							<li class="A-fanon">Fan theory and popular fanon</li>
-							<br>
-							<br>
-							<li>?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The event occurred approximately in this interval.</li>
-							<br>
-							<li>??&nbsp;&nbsp;&nbsp;&nbsp;A pretty wild guess as to when this event occurred.</li>
-						</ul>
-					</div>
-				</div>
-				<li>
-					<a href="#footer">Contact</a>
-				</li>
-				<li>
-					<h3>click on paragraphs to see color coding for sources</h3>
-				</li>
-			</ul>
-		</div>
+	</script> 
+	<div class="noshow">
+		<a href="index.html">Return To Master Index</a>
 	</div>
+
+	<div id="navbar"></div>
+
 	<div id="decoration-left">
 		<img src="images/circular8.png">
 	</div>
 	<div id="decoration-right">
 		<img src="images/circular9.png">
 	</div>
+
 	<div class="main">
 			<div class="title" id="table" style="padding-top: 150px;">
 				<h1>GALLIFREY
@@ -199,7 +51,9 @@
 			</div>
 			<img src="images/dwlogo.png" alt="Dr Who Logo" class="lead cf">
 			<h2>TABLE OF CONTENTS</h2>
-			<div class="table cf">
+			<div id="gallifreynav"></div>
+
+			<!-- <div class="table cf">
 				<img src="images/gallifreyplanet1.jpg" title="The Planet Gallifrey" alt="Picture of Gallifrey">
 				<ul>
 					<li>
@@ -230,7 +84,8 @@
 						<a href="#ancient">SHOBOGANS</a>
 					</li>
 				</ul>
-			</div>
+			</div> -->
+
 			<h3>Click on paragraphs to see color coding for sources</h3>
 		</div>
 		<div class="article" id="location" style="padding-top: 160px; margin-top: -160px;">
@@ -242,7 +97,7 @@
 			<h2>ASTROPHYSICAL LOCATION</h2>
 			<div class="section">
 				<span class="A-tv">During the Rassilon Era
-					<span class="A-audiobook"> Gallifrey's constellation</span> is 29,000 light years from Sol III (the Eath). </span><span class="A-tv">The Constellation of Kasterborous is located&nbsp;</span><span class="A-audiobook">within <span class="A-licensed">a parsec or two</span> of the center </span>
+					<span class="A-audiobook"> Gallifrey's constellation</span> is 29,000 light years from Sol III (the Earth). </span><span class="A-tv">The Constellation of Kasterborous is located&nbsp;</span><span class="A-audiobook">within <span class="A-licensed">a parsec or two</span> of the center </span>
 				<span class="A-infinity"> (or the edge)</span>
 				<span class="A-audiobook"> of</span>
 				<span class="A-tv"> the Mutter's Stellian
@@ -255,12 +110,11 @@
 				</span>
 				<span class="A-audiobook">The Kasterborous Constellation is probably in the </span>
 				<span class="A-audiobook">Sagittarius Constellation (center of the Galaxy) in the Earth skies.</span>
-				<span class="A-tv">During
-the Rassilon Era its binary coordinates are 10-0-11-0-0 by 02 from
-galactic 0 center. The Nebula of Cyclops is near enough to Gallifrey </span><span class="A-audiobook">to be faintly visible.</span>
-				<span class="A-tv"></span><span class="A-tv"><span class="A-fanon">&nbsp;</span></span><div class="box">
-					<h2>War Time: The Nine Homeworlds Project</h2><p>
-					<span class="A-notbbc">Ninty-five years </span><span class="A-audiobook">before the beginning of the Time War the High Council approves</span><span class="A-notbbc"> House Lineacrux's Nine Homeworld Project. The Lineacrux cousins quietly arranged for </span><span class="A-audiobook">the crypto-forming of eight new Gallifrey “Clones” </span><span class="A-audiobook">out of existing Gallifreyan Colonies.</span>&nbsp;<span class="A-fanon"></span><span class="A-notbbc">The Project involves placing 8 planets into Inner Time and anchoring them to the Web of Time. At least one of the planets
+				<span class="A-tv">During the Rassilon Era its binary coordinates are 10-0-11-0-0 by 02 from galactic 0 center. The Nebula of Cyclops is near enough to Gallifrey </span><span class="A-audiobook">to be faintly visible. </span>
+				<div class="box">
+					<h2>War Time: The Nine Homeworlds Project</h2>
+					<p>
+						<span class="A-notbbc">Ninety-five years </span><span class="A-audiobook">before the beginning of the Time War the High Council approves</span><span class="A-notbbc"> House Lineacrux's Nine Homeworld Project. The Lineacrux cousins quietly arranged for </span><span class="A-audiobook">the crypto-forming of eight new Gallifrey “Clones” </span><span class="A-audiobook">out of existing Gallifreyan Colonies.</span>&nbsp;<span class="A-fanon"></span><span class="A-notbbc">The Project involves placing 8 planets into Inner Time and anchoring them to the Web of Time. At least one of the planets
 							that were crypto-formed was inhabited by humans. Each of these cloneworlds was primed with the Laws of Time.</span>
 						<span class="A-audiobook"> The "clones" are to be used as bolt-holes, decoys, </span>
 						<span class="A-notbbc">and alternative homeworlds because the original is less secure.</span>
@@ -331,7 +185,7 @@ galactic 0 center. The Nebula of Cyclops is near enough to Gallifrey </span><spa
 						<span class="A-tv">The original Gallifrey was probably still located&nbsp;,
 						</span>
 						<span class="A-audiobook"> near the center of the galaxy </span>
-						<span class="A-tv">but by the year 2000 AD Gallirey could be found 250,000,000 light-years away from the Earth </span><span class="A-tv"><span class="A-audiobook">in another galaxy. </span></span><span class="A-tv">. </span>
+						<span class="A-tv">but by the year 2000 AD Gallifrey could be found 250,000,000 light-years away from the Earth </span><span class="A-tv"><span class="A-audiobook">in another galaxy. </span></span><span class="A-tv">. </span>
 						<span class="A-notbbc"> One of the cloneworlds</span><span class="A-notbbc"> was put in the original's location</span><span class="A-tv">, 29,000 light-years from Sol</span><span class="A-notbbc">.</span>&nbsp;<span class="A-audiobook"><span class="A-licensed">One Gallifrey could be seen with the Griffith Observatory's Telescope on 21st century Earth.</span></span><span class="A-tv"></span><span class="A-tv">&nbsp;<span class="A-audiobook"></span></span><span class="A-audiobook">Still other sources reported the Kasterborous constellation being located billions of light-years from the Earth,<span class="A-licensed"> at the very edge of time and space.</span></span><span class="A-tv"><span class="A-fanon">&nbsp;</span></span><span class="A-audiobook"> </span>
 					</p>
 					<p><span class="A-fanon">About a decade after the Time War begins</span><span class="A-fanon"><span class="A-audiobook"> </span></span><span class="A-notbbc">the Time Lord Braxiatel begins using the energy from KS-159 to prepare the planet Maximediras as a possible new Gallifrey. </span><span class="A-fanon"><span class="A-audiobook">A
@@ -344,7 +198,7 @@ Gallifreys was destroyed by the end of the Time War.</span> &nbsp;<span class="A
 					<h2>End of Time:&nbsp;Gallifrey Falls No More</h2>
 					<p>
 					<span class="A-tv">After
-escaping from a pocket dimension the surving Time Lords hide the final
+escaping from a pocket dimension the surviving Time Lords hide the final
 Gallifrey at the end of the Universe for its own protection.&nbsp;<span class="A-licensed">The Gallifrey is not a recent re-creation but one that fought in the Time War. </span></span><span class="A-game">Its possible that this homeworld is located at the same spatial co-ordinates as the original.</span></p>
 				</div>
 			</div>
@@ -364,7 +218,7 @@ slowing by about 1 second every hour. The Doctor was born around March
 				<div class="box">
 					<h2>War Time: The Nine Homeworlds Project</h2>
 					<p>
-					<span class="A-notbbc">Ninty-five years </span><span class="A-audiobook">before the beginning of the Time War, </span><span class="A-notbbc">House Lineacrux quietly arranged for </span><span class="A-audiobook">the crypto-forming of eight new Gallifrey “Clones” </span><span class="A-audiobook">out of existing Gallifreyan Colonies. </span><span class="A-notbbc">The
+					<span class="A-notbbc">Ninety-five years </span><span class="A-audiobook">before the beginning of the Time War, </span><span class="A-notbbc">House Lineacrux quietly arranged for </span><span class="A-audiobook">the crypto-forming of eight new Gallifrey “Clones” </span><span class="A-audiobook">out of existing Gallifreyan Colonies. </span><span class="A-notbbc">The
 Project involves placing 8 planets into Inner Time and anchoring them
 to the Web of Time. Each of these cloneworlds was primed with the Laws
 of Time.</span>
@@ -392,7 +246,7 @@ of Time.</span>
 					</p>
 					<ul>
 						<li>
-							<span class="A-audiobook">The Gallifrrey left at the original co-ordinates, was at </span>
+							<span class="A-audiobook">The Gallifrey left at the original co-ordinates, was at </span>
 							<span class="A-audiobook">
 								<span class="A-audiobook">2059 AD at the time of the 9 Homeworlds Project. </span>
 							</span>
@@ -579,29 +433,11 @@ to its rotational axis). These twin suns </span>
 					<h2>Tersurus</h2>
 					<div class="box">
 						<h2>Old Time: Tersurrans</h2>
-						<p><span class="A-audiobook">Tersurrans
-have huge, jutting, foreheads and scrunched up tiny faces. They are
-covered in white hair and have short, but powerful, arms. Tersurrans
-can sense the health of the people they touch. They prefer hot weather
-and cold weather tends to make them ill. They were considered to be one
-of the nicest species in the cosmos. During the Gallifreyan Empire they
-were used as slaves of the Shoboans. </span></p>
+						<p><span class="A-audiobook">Tersurrans have huge, jutting, foreheads and scrunched up tiny faces. They are covered in white hair and have short, but powerful, arms. Tersurrans can sense the health of the people they touch. They prefer hot weather and cold weather tends to make them ill. They were considered to be one of the nicest species in the cosmos. During the Gallifreyan Empire they were used as slaves of the Shobogans. </span></p>
 					</div>
-					<p><span class="A-tv">The planet Tersurus </span><span class="A-audiobook">is
-known as one of the Outer Planets by the Gallifreyans. It has at least
-one moon. The planet has singing stones and numerous clone banks. Due
-to an attack by the Fendahl Predator, the people of Tersurus have lost
-all but the most tenuous forms of communications. <span class="A-alternate">From
-that point forward they could communicate only by carefully controlled
-breaking of wind. The species was wiped out after they discovered fire.
-</span>Now the Time Lords have surrounded the planet Tersurus with
-temporal defenses. On that world is a time-shielded vault filled with
-the technology of the Dimensioneers. Raston Robots are built on the
-moon of Tersurus Luna by the Raston Hardware Company. They are marketed
-as being ancient technology by the inhabitants. But the design isn't
-really that old and the company is still in operation in the 21st
-century AD. Tersurus was destroyed by the Sontarans with a
-cyber-earthshock bomb in 6211 AD/</span><span class="A-game">GRT. </span></p>
+					<p>
+						<span class="A-tv">The planet Tersurus </span><span class="A-audiobook">is known as one of the Outer Planets by the Gallifreyans. It has at least one moon. The planet has singing stones and numerous clone banks. Due to an attack by the Fendahl Predator, the people of Tersurus have lost all but the most tenuous forms of communications. <span class="A-alternate">From that point forward they could communicate only by carefully controlled breaking of wind. The species was wiped out after they discovered fire. </span>Now the Time Lords have surrounded the planet Tersurus with temporal defenses. On that world is a time-shielded vault filled with the technology of the Dimensioneers. Raston Robots are built on the moon of Tersurus Luna by the Raston Hardware Company. They are marketed as being ancient technology by the inhabitants. But the design isn't really that old and the company is still in operation in the 21st century AD. Tersurus was destroyed by the Sontarans with a cyber-earthshock bomb in 6211 AD/</span><span class="A-game">GRT. </span>
+					</p>
 			</div>
 			<div class="section">
 				<figure>
@@ -622,22 +458,25 @@ the secrets of the
 Empire.&nbsp;The brilliant engineers, <span class="A-licensed">artificers,</span> and scientists who work there <span class="A-licensed">held titles of King and Queens, and </span>were known as the Masters of Karn.&nbsp;</span></span><span class="A-alternate">The Masters were ruled by the Grand Master of Karn.</span><span class="A-audiobook"><span class="A-alternate">
 </span></span><span class="A-audiobook"><span class="A-alternate"><span class="A-licensed">If it was the will of the majority, the <span class="A-fanon">Grand</span> Master <span class="A-fanon">of Karn</span> could be dethroned. </span></span></span><span class="A-audiobook"><span class="A-alternate">They construct many fantastic weapons and other machines.&nbsp;While the
 Masters of Karn were arrogant and over-confident, they weren't actually
-evil. <span class="A-licensed">The people of this world will live in peace and prosperity for thousands of years.</span></span></span></p><p><span class="A-audiobook"><span class="A-alternate"><span class="A-licensed">During the Time of Stones,</span> the Master of Karn known as&nbsp;<span class="A-licensed">Drextor had </span></span></span><span class="A-audiobook"><span class="A-alternate"><span class="A-licensed">Slendor</span></span></span><span class="A-audiobook"><span class="A-alternate"><span class="A-licensed">, design and build a massive
+evil. <span class="A-licensed">The people of this world will live in peace and prosperity for thousands of years.</span></span></span>
+</p>
+<p>
+	<span class="A-audiobook"><span class="A-alternate"><span class="A-licensed">During the Time of Stones,</span> the Master of Karn known as <span class="A-licensed">Drextor had </span></span></span><span class="A-audiobook"><span class="A-alternate"><span class="A-licensed">Slendor</span></span></span><span class="A-audiobook"><span class="A-alternate"><span class="A-licensed">, design and build a massive
 							<span class="A-alternate">'Ultimate
-								<span class="A-licensed">
-								</span>
 							</span>
-							<span class="A-licensed">Weapon.'&nbsp;</span></span></span></span><span class="A-alternate">This weapon could change the nature of cosmic rays throughout the Universe so that they would drain energy from animal tissue <span class="A-licensed">and use it to make the air itself burn.
+							<span class="A-licensed">Weapon.' </span></span></span></span><span class="A-alternate">This weapon could change the nature of cosmic rays throughout the Universe so that they would drain energy from animal tissue <span class="A-licensed">and use it to make the air itself burn.
 					</span>The
 					Weapon could be configured so that specified species are immune.&nbsp;</span><span class="A-licensed">Selendor also mined a powerful ore from beneath the surface of Gallifrey
 					<span class="A-fanon"> (probably Taranium) </span>to create the
 					<span class="A-alternate">Crystal of All-Power.</span>
 				</span>
-				<span class="A-alternate"></span>
 				<span class="A-alternate">The Crystal of All-Power <span class="A-licensed">was required to </span>as a catalyst to boost the power of&nbsp;<span class="A-licensed">the Ultimate Weapon. When
 Drextor was crowned King he announced the completion of the Weapon. But
 it was not long after this that Drextor's own wife poisoned him to
-prevent the weapon's use. &nbsp;</span></span><span class="A-alternate"></span></p><p><span class="A-alternate">The civil war on Karn leads to the use of
+prevent the weapon's use. </span></span>
+</p>
+<p>
+	<span class="A-alternate">The civil war on Karn leads to the use of
 					<span class="A-licensed">Slendor's </span>Ultimate Weapon&nbsp;</span><span class="A-alternate">as the Empire collapsed. </span>
 					<span class="A-licensed"></span><span class="A-alternate"> The world is devastated&nbsp; and most of the Masters of Karn are killed. </span><span class="A-alternate">Some
 					of the
@@ -1142,22 +981,8 @@ Gallifrey.&nbsp; </span><br></p>
 			
 	</div>
 
-	<div id="footer">
-		<img src="images/dwlogo.png" alt="Dr Who Logo" class="lead cf">
-		<h2>CONTACT HAS BEEN MADE</h2>
-		<p>
-			<span class="A-fanon">If
-you think I've forgotten some data, have a question, or just want to
-give your opinion on my page, then please don't hesitate to let me
-know. </span>
-		</p>
-		<p>
-			<a href="mailto:willbswift@hotmail.com">Email</a> Marnal Gate at willbswift@hotmail.com</p>
-		<p>Follow me on
-			<a href="https://www.facebook.com/brian.swift.79" target="_blank">Facebook</a>
-		</p>
-		<p>Copyright 2018 AD</p>
-	</div>
+	<div id="footer"></div>
+
 
 <!-- 
 	<div class="box">

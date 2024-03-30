@@ -19,7 +19,7 @@ body {
 	color: #cdd2ea;
 	text-shadow: 0 0 2px black;
 /* USE THE LINE OF TEXT BELOW TO MAKE IT EASY TO EDIT ON KOMPOZER. 321  ALSO SEE NAV AND COLORS BELOW*/
-	  max-width: 2280px;  */ 
+	  /* max-width: 2280px;  */  
 }
 hr {
 	width: 50%;
@@ -88,6 +88,10 @@ figcaption a {
 	border-radius: 4px;
 }
 
+#navbar {
+	overflow: hidden;
+  }  
+
 .header {
 	display: flex;
 	justify-content: space-between;
@@ -102,8 +106,9 @@ figcaption a {
 	width: 95%;
 	max-width: 1280px;
 /* USE THIS FOR DISABLING HEADER FOR EDITING TEXT, 321 Also enable wide screen Body above and Colors below! */
-	  display: none;  */
+	  /* display: none;  */
 }
+
 .nav {
 	padding: 1px;
 }
@@ -316,7 +321,7 @@ caption {
 .table img {
 	float: left;
 	margin-left: 0;
-	margin-right: 2rem;
+	margin-right: 1.4rem;
 	margin-bottom: 1rem;
 }
 .table ul {
@@ -347,7 +352,7 @@ caption {
 	clear: both;
 }
 .cf {
-	*zoom: 1;
+	zoom: 1;
 }
 
 .quote {
@@ -429,7 +434,7 @@ p {
   	text-shadow: 0 0 3px black;
 }
 .main {
-	margin: 0 6rem 0 6rem;
+	margin: 0 3rem 0 3rem;
 	font-family: arial, Times, serif;
   	font-size: 1.2rem;
   	line-height: 1.8rem;
@@ -803,7 +808,7 @@ p {
 
 /* Activate the classes below for editing in Kompozer. 321 Also activate wide screen Body & de-activate the Nav */
  
-.A-tv {
+/* .A-tv {
 	background: black;
 	color: red;
 }
@@ -834,10 +839,10 @@ p {
 .A-fanon {
 	background: black;
 	color: white;
-}
-*/
+} */
 
-#footer {
+.footer {
+	/* overflow: hidden; */
 	margin: 1rem auto;
 	max-width: 1280px;
 	margin-right: 0;
