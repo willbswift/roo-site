@@ -362,6 +362,13 @@ caption {
 	font-weight: bold;
 	font-style: italic;
 }
+.smallquote {
+	text-align: center;
+	font-family: Times New Roman, Times, serif;
+	font-weight: bold;
+	font-style: italic;
+}
+
 .speaker {
 	text-align: right;
 	font-family: Times New Roman, Times, serif;
@@ -823,7 +830,7 @@ p {
 }
 
 /* Activate the classes below for editing in Kompozer. 321 Also activate wide screen Body & de-activate the Nav */
- /*
+/*
  .A-tv {
 	background: black;
 	color: red;
@@ -938,7 +945,7 @@ p {
 }
 
 
-/* This is the media modifier for overrides nessecary to make the page look good on small screen [like cell phones] */
+/* This is the media modifier for overrides nessesary to make the page look good on small screen [like cell phones] */
 
 @media (max-width: 900px) {
 	body {

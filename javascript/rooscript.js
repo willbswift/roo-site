@@ -22,6 +22,9 @@ $(function(){
   $("#lifedeathnav").load("roolifedeathnav.html"); 
 });
 $(function(){
+  $("#technav").load("rootechnav.html"); 
+});
+$(function(){
   $("#governmentnav").load("roogovernmentnav.html"); 
 });
 $(function(){
