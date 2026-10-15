@@ -531,6 +531,10 @@ p {
 	background: black;
 	color: #33ff33;
 }
+.active .A-behind {
+	background: black;
+	color: #993300;
+}
 .active .A-infinity {
 	background: black;
 	color: #33ccff;
@@ -609,6 +613,22 @@ p {
 .A-game::-moz-selection {
   background: darkblue;
   color: #33ff33;
+  text-shadow:none;
+}
+
+.A-behind::selection {
+  background: darkblue;
+  color: #993300;
+  text-shadow:none;
+}
+.A-behind::-webkit-selection {
+  background: darkblue;
+  color: #993300;
+  text-shadow:none;
+}
+.A-behind::-moz-selection {
+  background: darkblue;
+  color:#993300 ;
   text-shadow:none;
 }
 
@@ -693,6 +713,9 @@ p {
 }
 .innerlink .A-game {
 	color: #33ff33;
+}
+.innerlink .A-behind {
+	color: #993300;
 }
 .innerlink .A-infinity {
 	color: #33ccff;
@@ -847,6 +870,10 @@ p {
 	background: black;
 	color: #33ff33;
 }
+.A-behind {
+	background: black;
+	color: #993300;
+}
 .A-infinity {
 	background: black;
 	color: #33ccff;
@@ -927,6 +954,10 @@ p {
 	background: black;
 	color: #33ff33;
 }
+.mobile .A-behind {
+	background: black;
+	color: #993300;
+}
 .mobile .A-infinity {
 	background: black;
 	color: #33ccff;
@@ -1000,6 +1031,10 @@ p {
 	.A-game {
 		background: black;
 		color: #33ff33;
+	}
+	.A-behind {
+		background: black;
+		color: #993300;
 	}
 	.A-infinity {
 		background: black;
