@@ -1,0 +1,27 @@
+# Visual Studio / editor caches
+.vs/
+*.suo
+*.user
+*.vsidx
+*.sqlite
+
+# Keep the shared VS Code launch config, ignore the rest
+.vscode/*
+!.vscode/launch.json
+
+# Claude Code personal settings
+.claude/settings.local.json
+
+# OS clutter
+Thumbs.db
+desktop.ini
+.DS_Store
+ehthumbs.db
+
+# Dropbox artifacts
+.dropbox
+.dropbox.attr
+*conflicted copy*
+
+# Node, in case local preview tools get installed
+node_modules/
