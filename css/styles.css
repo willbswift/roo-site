@@ -13,7 +13,8 @@ body {
 	width: 95%;
 	margin: 1rem auto;
 	/* 2280px is the site's long-standing width. The header stays at 1280px. */
-	max-width: 2280px;
+	/* max-width: 2280px; */
+	max-width: 1280px; 
 	display: block;
 	font-family: arial, Times New Roman, Times, serif;
 	font-size: 1.2rem;
