@@ -32,7 +32,8 @@ There is no build step, no framework and no package manager. It's plain HTML, CS
   http://localhost:8080. `.vscode/launch.json` and `.claude/launch.json` (server name `roo-site`)
   already target port 8080.
 - Every page shares the same `<head>`: normalize.css, the Google Fonts (Russo One, Sarpanch),
-  styles.css, the `images/rassilonicon2.png` favicon, and jQuery 3.5.1 from code.jquery.com.
+  styles.css, the `images/rassilonicon2.png` favicon, and jQuery 4.0.0 from code.jquery.com
+  (with its `integrity` hash and `crossorigin="anonymous"`; copy the tag from an existing page).
   Keep new pages consistent with that.
 - Every page's `<html>` tag is `<html lang="en" class="no-js">`, and the first line of the inline
   `isMobile` script is
