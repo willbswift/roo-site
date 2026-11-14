@@ -13,8 +13,9 @@
 <body>&nbsp;&nbsp;&nbsp; <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha384-fgGyf7Mo7DURSOMnOy7ed+dkq5Job205Gnzu6QIg0BOHKaqt4D76Dt8VlDCzcMHV" crossorigin="anonymous"></script>
 	<script> 
 		document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-		var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android)/);
-		if (isMobile != null) {
+		var isMobile = /(iPhone|iPod|iPad|Android)/.test(navigator.userAgent) ||
+			(/Macintosh/.test(navigator.userAgent) && navigator.maxTouchPoints > 1);
+		if (isMobile) {
 			document.body.className += ' ' + 'mobile';
 		}
 	</script> 
