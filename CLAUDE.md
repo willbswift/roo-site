@@ -29,22 +29,30 @@ There is no build step, no framework and no package manager. It's plain HTML, CS
   file, and a `.load()` line in `rooscript.js`.
 - Because `.load()` uses XHR, pages must be previewed over HTTP, not `file://`.
   Run `python -m http.server 8080` (or `npx serve`) from the repo root and open
-  http://localhost:8080. `.vscode/launch.json` already targets port 8080.
+  http://localhost:8080. `.vscode/launch.json` and `.claude/launch.json` (server name `roo-site`)
+  already target port 8080.
 - Every page shares the same `<head>`: normalize.css, the Google Fonts (Russo One, Sarpanch),
   styles.css, the `images/rassilonicon2.png` favicon, and jQuery 3.5.1 from code.jquery.com.
   Keep new pages consistent with that.
-- Every page's tag is `<html lang="en" class="no-js">`, and the first line of the inline
+- Every page's `<html>` tag is `<html lang="en" class="no-js">`, and the first line of the inline
   `isMobile` script is
   `document.documentElement.className = document.documentElement.className.replace('no-js', 'js');`.
-  New pages need both.
+  New pages need both (see Kompozer edit mode below). The `isMobile` script sits right after
+  `<body>` on content pages and in `<head>` on `index.html`.
 
 ## Kompozer edit mode
 
-The author edits pages in Kompozer, which doesn't run JavaScript in its editing view.
-The rules under `.no-js` in the "KOMPOZER EDIT MODE" section of styles.css apply only there:
-a wide body (2280px), a hidden header, and source colors that are always on. In a browser the
-script swaps `no-js` for `js`, so visitors get the normal 1280px layout and the click-to-reveal
-colors. Don't go back to switching modes by commenting CSS in and out.
+The author edits pages in Kompozer. Its editing view doesn't run JavaScript (confirmed in
+Kompozer), so the navbar and footer fragments never load there either.
+- The rules under `.no-js` in the "KOMPOZER EDIT MODE" section of styles.css apply only in
+  Kompozer: a wide body (2280px), a hidden header, and source colors that are always on.
+- In a browser the inline script swaps `no-js` for `js`, so visitors get the normal 1280px layout
+  and the click-to-reveal colors.
+- Keep the swap line inline and first on the page. Moving it into `rooscript.js` (loaded at the
+  end of the page) would flash edit mode before the page switches.
+- Don't go back to switching modes by commenting CSS in and out (the old `321` toggles). That
+  approach left stray `*/` markers that broke the live site's styles.
+- Visitors with JavaScript disabled also see edit mode. That's accepted.
 
 ## Source color coding (core feature — preserve it)
 
@@ -55,8 +63,10 @@ Clicking a `.main` block toggles `.active`, which reveals the colors (see `.acti
 styles.css). When editing text:
 - Never strip, merge or reassign these classes. A sentence's source class is data.
 - Keep the edit inside the existing span. If text from two sources is merged, keep separate spans.
-- If you add a new source class, add both the base rule and the `.active` rule in styles.css,
-  and add it to the color key / SOURCES explanation.
+- If you add a new source class, copy the existing `A-tv` rules in styles.css. There are
+  `.active`, `::selection`, `.innerlink` (color key), `.no-js` (Kompozer edit mode), `.mobile` and
+  `@media (max-width: 900px)` versions. Also add the class to the color key / SOURCES explanation.
+- Class names are case-sensitive and must be exact: `A-TV` or `A-tv"` silently lose their color.
 
 ## Writing and spelling conventions
 
@@ -87,4 +97,10 @@ styles.css). When editing text:
 
 - The working copy lives in Dropbox. Dropbox syncing `.git` can cause lock-file and corruption
   problems. If git reports `index.lock` or "File exists" errors, check for Dropbox conflicted copies.
+  "unable to write new index file" has also happened. It was a brief Dropbox lock, and retrying
+  the command worked.
+- Claude sessions work in worktrees under `.claude/worktrees/` on `claude/...` branches. `master`
+  is checked out in the main folder, so merge with `git merge --ff-only <branch>` run there.
+- Pages use CRLF line endings, and `core.autocrlf` is on. "LF will be replaced by CRLF" warnings
+  are normal.
 - `.vs/` (Visual Studio cache) was committed in the past and is now in `.gitignore`.
