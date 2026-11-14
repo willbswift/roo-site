@@ -18,8 +18,7 @@ body {
 	font-size: 1.2rem;
 	color: #cdd2ea;
 	text-shadow: 0 0 2px black;
-/* USE THE LINE OF TEXT BELOW TO MAKE IT EASY TO EDIT ON KOMPOZER. 321  ALSO SEE NAV AND COLORS BELOW*/
-	   max-width: 2280px;  */  
+	/* Kompozer edit mode (wide body) is automatic: see KOMPOZER EDIT MODE below. 321 */
 }
 hr {
 	width: 50%;
@@ -105,8 +104,7 @@ figcaption a {
 	border-radius: 20px;
 	width: 95%;
 	max-width: 1280px;
-/* USE THIS FOR DISABLING HEADER FOR EDITING TEXT, 321 Also enable wide screen Body above and Colors below! */
-	  /* display: none;  */
+	/* Kompozer edit mode (hidden header) is automatic: see KOMPOZER EDIT MODE below. 321 */
 }
 
 .nav {
@@ -852,44 +850,55 @@ p {
 	text-align: center;
 }
 
-/* Activate the classes below for editing in Kompozer. 321 Also activate wide screen Body & de-activate the Nav */
-
- .A-tv {
+/* ===== KOMPOZER EDIT MODE ===== 321
+   These rules apply only when JavaScript is NOT running, which is the case in
+   Kompozer's editing view. Every page's <html> tag has class="no-js", and the
+   first script on the page changes it to "js", so visitors never see this.
+   Edit mode = wide body, hidden header, source colors always on.
+   No commenting/uncommenting needed. */
+.no-js body {
+	max-width: 2280px;
+}
+.no-js .header {
+	display: none;
+}
+.no-js .A-tv {
 	background: black;
 	color: red;
 }
-.A-audiobook {
+.no-js .A-audiobook {
 	background: black;
-	color: #ff6600
+	color: #ff6600;
 }
-.A-licensed {
+.no-js .A-licensed {
 	background: black;
-	color:#ffff00;
+	color: #ffff00;
 }
-.A-game {
+.no-js .A-game {
 	background: black;
 	color: #33ff33;
 }
-.A-behind {
+.no-js .A-behind {
 	background: black;
 	color: #993300;
 }
-.A-infinity {
+.no-js .A-infinity {
 	background: black;
 	color: #33ccff;
 }
-.A-alternate {
+.no-js .A-alternate {
 	background: black;
 	color: #cc33cc;
 }
-.A-notbbc {
+.no-js .A-notbbc {
 	background: black;
 	color: #999999;
 }
-.A-fanon {
+.no-js .A-fanon {
 	background: black;
 	color: white;
-} */
+}
+/* ===== END KOMPOZER EDIT MODE ===== */
 
 .footer {
 	/* overflow: hidden; */

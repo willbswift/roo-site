@@ -33,6 +33,18 @@ There is no build step, no framework and no package manager. It's plain HTML, CS
 - Every page shares the same `<head>`: normalize.css, the Google Fonts (Russo One, Sarpanch),
   styles.css, the `images/rassilonicon2.png` favicon, and jQuery 3.5.1 from code.jquery.com.
   Keep new pages consistent with that.
+- Every page's tag is `<html lang="en" class="no-js">`, and the first line of the inline
+  `isMobile` script is
+  `document.documentElement.className = document.documentElement.className.replace('no-js', 'js');`.
+  New pages need both.
+
+## Kompozer edit mode
+
+The author edits pages in Kompozer, which doesn't run JavaScript in its editing view.
+The rules under `.no-js` in the "KOMPOZER EDIT MODE" section of styles.css apply only there:
+a wide body (2280px), a hidden header, and source colors that are always on. In a browser the
+script swaps `no-js` for `js`, so visitors get the normal 1280px layout and the click-to-reveal
+colors. Don't go back to switching modes by commenting CSS in and out.
 
 ## Source color coding (core feature — preserve it)
 

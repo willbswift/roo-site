@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en" class="no-js"><head>
 	<meta charset="utf-8">
 	
 	<title>The Pre-War Era</title><meta name="author" content="William B. Swift">
@@ -13,6 +13,7 @@
 <body>
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script> 
+		document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
 		var isMobile = navigator.userAgent.match(/(iPhone|iPod|iPad|Android)/);
 		if (isMobile != null) {
 			document.body.className += ' ' + 'mobile';
