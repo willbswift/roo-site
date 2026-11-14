@@ -12,13 +12,13 @@ html {
 body {
 	width: 95%;
 	margin: 1rem auto;
-	max-width: 1280px;
+	/* 2280px is the site's long-standing width. The header stays at 1280px. */
+	max-width: 2280px;
 	display: block;
 	font-family: arial, Times New Roman, Times, serif;
 	font-size: 1.2rem;
 	color: #cdd2ea;
 	text-shadow: 0 0 2px black;
-	/* Kompozer edit mode (wide body) is automatic: see KOMPOZER EDIT MODE below. 321 */
 }
 hr {
 	width: 50%;
@@ -883,11 +883,8 @@ p {
    These rules apply only when JavaScript is NOT running, which is the case in
    Kompozer's editing view. Every page's <html> tag has class="no-js", and the
    first script on the page changes it to "js", so visitors never see this.
-   Edit mode = wide body, hidden header, source colors always on.
+   Edit mode = hidden header, source colors always on.
    No commenting/uncommenting needed. */
-.no-js body {
-	max-width: 2280px;
-}
 .no-js .header {
 	display: none;
 }

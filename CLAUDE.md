@@ -59,8 +59,8 @@ There is no build step, no framework and no package manager. It's plain HTML, CS
 The author edits pages in Kompozer. Its editing view doesn't run JavaScript (confirmed in
 Kompozer), so the navbar and footer fragments never load there either.
 - The rules under `.no-js` in the "KOMPOZER EDIT MODE" section of styles.css apply only in
-  Kompozer: a wide body (2280px), a hidden header, and source colors that are always on.
-- In a browser the inline script swaps `no-js` for `js`, so visitors get the normal 1280px layout
+  Kompozer: a hidden header and source colors that are always on.
+- In a browser the inline script swaps `no-js` for `js`, so visitors get the normal layout
   and the click-to-reveal colors.
 - Keep the swap line inline and first on the page. Moving it into `rooscript.js` (loaded at the
   end of the page) would flash edit mode before the page switches.
