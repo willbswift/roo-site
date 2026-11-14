@@ -30,7 +30,9 @@ There is no build step, no framework and no package manager. It's plain HTML, CS
 - Because `.load()` uses XHR, pages must be previewed over HTTP, not `file://`.
   Run `python -m http.server 8080` (or `npx serve`) from the repo root and open
   http://localhost:8080. `.vscode/launch.json` and `.claude/launch.json` (server name `roo-site`)
-  already target port 8080.
+  already target port 8080. If 8080 is already taken (e.g. a server in the main folder or another
+  worktree), that config fails, because its args hardcode 8080 even when the preview tool picks
+  another port. In that case, serve the worktree on a free port of its own. Don't stop the other server.
 - Every page shares the same `<head>`: normalize.css, the Google Fonts (Russo One, Sarpanch),
   styles.css, the `images/rassilonicon2.png` favicon, and jQuery 4.0.0 from code.jquery.com
   (with its `integrity` hash and `crossorigin="anonymous"`; copy the tag from an existing page).
@@ -39,7 +41,18 @@ There is no build step, no framework and no package manager. It's plain HTML, CS
   `isMobile` script is
   `document.documentElement.className = document.documentElement.className.replace('no-js', 'js');`.
   New pages need both (see Kompozer edit mode below). The `isMobile` script sits right after
-  `<body>` on content pages and in `<head>` on `index.html`.
+  `<body>` on content pages. It must stay in `<body>` because it writes `document.body.className`.
+  On `index.html` the swap line is in its own script in `<head>`, and the `isMobile` part is in `<body>`.
+- `navbar.html` markup: each dropdown is `<li class="dropdown"><span class="dropbtn">Label</span>
+  <ul class="dropdown-content"><li>…</li></ul></li>`, and the color key is
+  `<li class="dropdown innerlink">`. Put only `<li>` directly inside a `<ul>`, with no `<div>` or `<br>`.
+  The vertical spacing comes from the `.nav .dropdown-content li` rules in styles.css.
+  The extra gap above the `?`/`??` lines comes from `li.key-gap`.
+- Don't use the obsolete `<center>`, `<big>` or `<font>` tags. Use `<div class="centered">`,
+  `<span class="big-text">` and `<span class="smaller-text">` instead (styles.css). Kompozer may write
+  the old tags back. Convert them when you come across them, and keep any `A-*` class on the element
+  (e.g. `class="big-text A-fanon"`). Note that the existing `.center` class is a styled box, not
+  plain centering.
 
 ## Kompozer edit mode
 
