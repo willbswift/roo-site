@@ -124,10 +124,23 @@ figcaption a {
 	position: relative;
 	margin-bottom: 2px;
 }
-.nav ul div{
-	display: inline-block;
-	position: relative;
+/* Dropdown items stack one per line, shrink-wrapped and centered
+   (this replaces the <br> tags that used to sit between them). */
+.nav .dropdown-content li {
+	display: table;
+	margin: 1px auto 3px;
+}
+.nav .dropdown-content li:last-child {
 	margin-bottom: 2px;
+}
+.nav li.innerlink {
+	padding-bottom: 2px;
+}
+.nav .innerlink .dropdown-content li {
+	margin: 0 auto 2px;
+}
+.nav .dropdown-content li.key-gap {
+	margin-top: 24px;
 }
 
 .noshow a {
@@ -136,6 +149,7 @@ figcaption a {
 
 /* Style The Dropdown Button */
 .dropbtn {
+	display: inline-block;
 	font-family: Beijing SSI, arial, san-serif;
 	color: #6C6BD0;
 	text-transform: uppercase;
@@ -145,7 +159,7 @@ figcaption a {
 	padding-right: 4px;
 	text-decoration: none;
 	background-color: #cdd2ea;
-	margin: 0;
+	margin: 0 0 2px;
 	border-radius: 4px;
     cursor: pointer;
 }
@@ -848,6 +862,21 @@ p {
 #construction img {
 	height: 36rem;
 	text-align: center;
+}
+
+/* Replacements for the obsolete <center>, <big> and <font size="-1"> tags.
+   They reproduce the browser's built-in styling for those tags. */
+.centered {
+	display: block;
+	text-align: center;
+	text-align: -moz-center;
+	text-align: -webkit-center;
+}
+.big-text {
+	font-size: larger;
+}
+.smaller-text {
+	font-size: small;
 }
 
 /* ===== KOMPOZER EDIT MODE ===== 321
