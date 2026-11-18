@@ -37,6 +37,9 @@ There is no build step, no framework and no package manager. It's plain HTML, CS
   styles.css, the `images/rassilonicon2.png` favicon, and jQuery 4.0.0 from code.jquery.com
   (with its `integrity` hash and `crossorigin="anonymous"`; copy the tag from an existing page).
   Keep new pages consistent with that.
+- `Beijing SSI` and `CCTimelordSolid` in the styles.css font stacks are deliberately not
+  embedded (commercial, no web license). They show only where installed locally, and visitors
+  get the fallbacks. Don't add `@font-face` for them unless the author supplies licensed files.
 - Every page's `<html>` tag is `<html lang="en" class="no-js">`, and the first line of the inline
   `isMobile` script is
   `document.documentElement.className = document.documentElement.className.replace('no-js', 'js');`.

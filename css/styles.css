@@ -1,3 +1,8 @@
+/* FONTS: "Beijing SSI" and CCTimelordSolid are commercial fonts that are deliberately
+   not embedded (no web license). They show only where installed locally (the author's
+   machine, Kompozer). Visitors see the next font in each stack: Russo One and Sarpanch
+   (Google Fonts, loaded in every page's <head>) or Arial. */
+
 html {
 	/*background-image: url("../images/hexgrid.png"), linear-gradient(to right, black, #1e1e33, black);*/
 	background-image: url("../images/hexgrid.png"), linear-gradient(to right, black, #5655a8 , black);
@@ -16,7 +21,7 @@ body {
 	/* max-width: 2280px; */
 	max-width: 1280px; 
 	display: block;
-	font-family: arial, Times New Roman, Times, serif;
+	font-family: arial, sans-serif;
 	font-size: 1.2rem;
 	color: #cdd2ea;
 	text-shadow: 0 0 2px black;
@@ -75,7 +80,7 @@ figure a:focus {
 }
 
 figcaption a {
-	font-family: Beijing SSI, arial, san-serif;
+	font-family: "Beijing SSI", arial, sans-serif;
 	color: #6C6BD0;
 	text-transform: uppercase;
 	font-size: 1.2rem;
@@ -151,7 +156,7 @@ figcaption a {
 /* Style The Dropdown Button */
 .dropbtn {
 	display: inline-block;
-	font-family: Beijing SSI, arial, san-serif;
+	font-family: "Beijing SSI", arial, sans-serif;
 	color: #6C6BD0;
 	text-transform: uppercase;
 	font-size: 1.2rem;
@@ -183,7 +188,7 @@ figcaption a {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-	font-family: Beijing SSI, arial, san-serif;
+	font-family: "Beijing SSI", arial, sans-serif;
 	color: #6C6BD0;
 	text-transform: uppercase;
 	font-size: 1.2rem;
@@ -217,7 +222,7 @@ figcaption a {
 }
 
 a {
-	font-family: Beijing SSI, arial, san-serif;
+	font-family: "Beijing SSI", arial, sans-serif;
 	color: #6C6BD0;
 	text-transform: uppercase;
 	font-size: 1.2rem;
@@ -239,7 +244,7 @@ a:focus {
 	background-color: #6C6BD0;
 }
 a:visited {
-	font-family: Beijing SSI, arial, san-serif;
+	font-family: "Beijing SSI", arial, sans-serif;
 	color: #6C6BD0;
 	text-transform: uppercase;
 	font-size: 1.2rem;
@@ -370,21 +375,21 @@ caption {
 
 .quote {
 	text-align: center;
-	font-family: Times New Roman, Times, serif;
+	font-family: "Times New Roman", Times, serif;
 	font-size: 1.7rem;
 	font-weight: bold;
 	font-style: italic;
 }
 .smallquote {
 	text-align: center;
-	font-family: Times New Roman, Times, serif;
+	font-family: "Times New Roman", Times, serif;
 	font-weight: bold;
 	font-style: italic;
 }
 
 .speaker {
 	text-align: right;
-	font-family: Times New Roman, Times, serif;
+	font-family: "Times New Roman", Times, serif;
 	font-size: 1.7rem;
 	font-weight: bold;
 	margin-right: 6rem;
@@ -406,7 +411,7 @@ caption {
 
 h1 {
 	text-align: center;
-	font-family: CCTimelordSolid, Russo One, arial, sans-serif;
+	font-family: CCTimelordSolid, "Russo One", arial, sans-serif;
 	font-weight: bolder;
 	color: #5A6EBC;
 	font-size: 3.5rem;
@@ -422,7 +427,7 @@ h1 {
 }
 h2 {
 	text-align: left;
-	font-family: Beijing SSI, Sarpanch, Times New Roman, Times, san-serif;
+	font-family: "Beijing SSI", Sarpanch, "Times New Roman", Times, serif;
 	font-weight: bolder;
 	color: #cdd2ea;
 	font-size: 2rem;
@@ -435,7 +440,7 @@ h2 {
 
 h3 {
 	text-align: center;
-	font-family: Beijing SSI, arial, san-serif;
+	font-family: "Beijing SSI", arial, sans-serif;
 	color: red;
 	text-transform: uppercase;
 	font-size: 1.2rem;
@@ -448,14 +453,14 @@ h3 {
 	border-radius: 4px;
 }
 p {
-  	font-family: arial, Times, serif;
+  	font-family: arial, sans-serif;
   	font-size: 1.2rem;
   	color: #cdd2ea;
   	text-shadow: 0 0 3px black;
 }
 .main {
 	margin: 0 3rem 0 3rem;
-	font-family: arial, Times, serif;
+	font-family: arial, sans-serif;
   	font-size: 1.2rem;
   	line-height: 1.8rem;
   	color: #cdd2ea;
@@ -507,7 +512,7 @@ p {
 	/*all: unset;*/
 	background: none;
 	text-align: left;
-	font-family: Beijing SSI, Sarpanch, Times New Roman, Times, serif;
+	font-family: "Beijing SSI", Sarpanch, "Times New Roman", Times, serif;
 	font-weight: bolder;
 	color: #cdd2ea;
 	font-size: 2rem;
