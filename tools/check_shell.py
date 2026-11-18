@@ -60,6 +60,10 @@ ROOSCRIPT = '<script src="javascript/rooscript.js" type="text/javascript"></scri
 # stray scripts before it (e.g. a misplaced jQuery tag) count as shell drift.
 SHELL_END = re.compile(r"<body\b[^>]*>.*?\bisMobile\b.*?</script>", re.S | re.I)
 EMPTY_STYLE = re.compile(r"<style>\s*</style>", re.I)
+# Kompozer rewrites <html lang="en" class="no-js"> as <html class="no-js" lang="en">
+# when it saves. Attribute order doesn't matter, so accept either one.
+HTML_TAG_KOMPOZER = re.compile(r'<html\s+class="no-js"\s+lang="en"\s*>', re.I)
+HTML_TAG_STANDARD = '<html lang="en" class="no-js">'
 
 
 def page_files():
@@ -116,6 +120,7 @@ def check(path):
     if EMPTY_STYLE.search(shell):
         warnings.append("empty <style></style> in <head> (Kompozer may add this; harmless)")
         shell = EMPTY_STYLE.sub("", shell)
+    shell = HTML_TAG_KOMPOZER.sub(HTML_TAG_STANDARD, shell, count=1)
 
     fields = page_fields(shell)
     for name in ("title", "author", "description"):

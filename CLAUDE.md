@@ -51,7 +51,9 @@ There is no build step, no framework and no package manager. It's plain HTML, CS
 - `Beijing SSI` and `CCTimelordSolid` in the styles.css font stacks are deliberately not
   embedded (commercial, no web license). They show only where installed locally, and visitors
   get the fallbacks. Don't add `@font-face` for them unless the author supplies licensed files.
-- Every page's `<html>` tag is `<html lang="en" class="no-js">`, and the `<head>` has an inline
+- Every page's `<html>` tag is `<html lang="en" class="no-js">`. Kompozer rewrites it as
+  `<html class="no-js" lang="en">` when it saves. That's fine, and the check accepts either order.
+  The `<head>` has an inline
   script whose only line is
   `document.documentElement.className = document.documentElement.className.replace('no-js', 'js');`.
   It comes before the jQuery tag, so the swap doesn't wait for the download. New pages need both
