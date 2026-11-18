@@ -80,8 +80,12 @@ Kompozer), so the navbar and footer fragments never load there either.
   and the click-to-reveal colors.
 - Keep the swap line inline and as the first script on the page (in `<head>`, before jQuery). Moving it
   into `rooscript.js` (loaded at the end of the page) would flash edit mode before the page switches.
-- Don't go back to switching modes by commenting CSS in and out (the old `321` toggles). That
-  approach left stray `*/` markers that broke the live site's styles.
+- The `.no-js` class is the only mode switch. Don't go back to switching modes by commenting CSS
+  in and out (the old toggles). That approach left stray `*/` markers that broke the live site's styles.
+- "321" in styles.css comments (e.g. the KOMPOZER EDIT MODE header) is the author's search
+  bookmark. Keep it.
+- Commented-out rules in styles.css are the author's design notes, not switches. Leave them
+  alone unless asked.
 - Visitors with JavaScript disabled also see edit mode. That's accepted.
 
 ## Source color coding (core feature — preserve it)
