@@ -23,10 +23,14 @@ There is no build step, no framework and no package manager. It's plain HTML, CS
 
 ## How pages work
 
-- Fragments are injected with jQuery `.load()` in `rooscript.js`, e.g.
-  `$("#navbar").load("navbar.html")`, `$("#biologynav").load("roobiologynav.html")`.
-  A new page that needs a sub-nav needs three things: a `<div id="xxxnav">`, a `rooxxxnav.html`
-  file, and a `.load()` line in `rooscript.js`.
+- `rooscript.js` fills empty placeholder divs with jQuery `.load()`, picking the file from the id
+  by naming convention: `#navbar` → `navbar.html`, `#footer` → `footer.html`, and any
+  `<div id="xxxnav">` → `rooxxxnav.html`. A new page that needs a sub-nav needs only a
+  `<div id="xxxnav">` and a matching `rooxxxnav.html` file. Don't edit the script for it, and don't
+  give other elements an id ending in `nav`. If a fragment fails to load, the placeholder shows
+  a `.fragment-error` note and the error is logged to the console.
+- The `.main` click handler (source colors) is delegated from `document`, so it also works on
+  content that arrives later.
 - Because `.load()` uses XHR, pages must be previewed over HTTP, not `file://`.
   Run `python -m http.server 8080` (or `npx serve`) from the repo root and open
   http://localhost:8080. `.vscode/launch.json` and `.claude/launch.json` (server name `roo-site`)

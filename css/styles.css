@@ -95,7 +95,17 @@ figcaption a {
 
 #navbar {
 	overflow: hidden;
-  }  
+  }
+
+/* Shown by rooscript.js in place of a navbar/footer/sub-nav that failed to load. */
+.fragment-error {
+	margin: 0.5em 0;
+	padding: 0.5em 1em;
+	border: solid 2px #cdd2ea;
+	border-radius: 8px;
+	background: rgba(0, 0, 0, 0.6);
+	color: #cdd2ea;
+}
 
 .header {
 	display: flex;
