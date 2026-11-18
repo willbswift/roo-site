@@ -97,9 +97,14 @@ Clicking a `.main` block toggles `.active`, which reveals the colors (see `.acti
 styles.css). When editing text:
 - Never strip, merge or reassign these classes. A sentence's source class is data.
 - Keep the edit inside the existing span. If text from two sources is merged, keep separate spans.
-- If you add a new source class, copy the existing `A-tv` rules in styles.css. There are
-  `.active`, `::selection`, `.innerlink` (color key), `.no-js` (Kompozer edit mode), `.mobile` and
-  `@media (max-width: 900px)` versions. Also add the class to the color key / SOURCES explanation.
+- The source colors live in the SOURCE COLORS block of styles.css. There's one grouped
+  line per source covering `.active`, `.no-js` (Kompozer edit mode), `.mobile` and `.innerlink` (color key),
+  plus a black-background group and the `::selection` rules. The only other copy is in
+  `@media (max-width: 900px)`, where the colors are always on. To add a source class, follow the
+  steps in that block's comment, and also add the class to the color key / SOURCES explanation.
+- Don't use CSS custom properties (`var()`), `:is()`/`:where()` or other modern CSS for anything
+  Kompozer needs to show. Kompozer's engine (Gecko 1.8) ignores them. Write colors out, and use
+  plain grouped selectors (`a, b { }`) to share rules. The palette comment at the top of styles.css names the colors.
 - Class names are case-sensitive and must be exact: `A-TV` or `A-tv"` silently lose their color.
 
 ## Writing and spelling conventions

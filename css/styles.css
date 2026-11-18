@@ -3,6 +3,14 @@
    machine, Kompozer). Visitors see the next font in each stack: Russo One and Sarpanch
    (Google Fonts, loaded in every page's <head>) or Arial. */
 
+/* PALETTE: colors are written out (no CSS variables, because Kompozer can't read them).
+     #cdd2ea  pale lavender: body text, borders, link "pills", panel backgrounds
+     #6C6BD0  violet: link text, gradient centers (radial-gradient(#6C6BD0, black))
+     #5655a8  dark violet: page background gradient
+   Source colors (see SOURCE COLORS): A-tv red, A-audiobook #ff6600, A-licensed #ffff00,
+   A-game #33ff33, A-behind #993300, A-infinity #33ccff, A-alternate #cc33cc,
+   A-notbbc #999999, A-fanon white. */
+
 html {
 	/*background-image: url("../images/hexgrid.png"), linear-gradient(to right, black, #1e1e33, black);*/
 	background-image: url("../images/hexgrid.png"), linear-gradient(to right, black, #5655a8 , black);
@@ -79,20 +87,6 @@ figure a:focus {
 	background-color: rgba(0,0,0,0);
 }
 
-figcaption a {
-	font-family: "Beijing SSI", arial, sans-serif;
-	color: #6C6BD0;
-	text-transform: uppercase;
-	font-size: 1.2rem;
-	text-shadow: none;
-	padding-left: 4px;
-	padding-right: 4px;
-	text-decoration: none;
-	background-color: #cdd2ea;
-	margin: 0;
-	border-radius: 4px;
-}
-
 #navbar {
 	overflow: hidden;
   }
@@ -163,22 +157,7 @@ figcaption a {
 	display: none;
 }
 
-/* Style The Dropdown Button */
-.dropbtn {
-	display: inline-block;
-	font-family: "Beijing SSI", arial, sans-serif;
-	color: #6C6BD0;
-	text-transform: uppercase;
-	font-size: 1.2rem;
-	text-shadow: none;
-	padding-left: 4px;
-	padding-right: 4px;
-	text-decoration: none;
-	background-color: #cdd2ea;
-	margin: 0 0 2px;
-	border-radius: 4px;
-    cursor: pointer;
-}
+/* The dropdown button (.dropbtn) shares the link "pill" style: see the a, figcaption a, .dropbtn rule below. */
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
@@ -231,7 +210,12 @@ figcaption a {
     color: red;
 }
 
-a {
+/* Links and the dropdown button share one "pill" style. figcaption a is listed so caption
+   links keep the pill despite the transparent figure a rule above. Visited links look the
+   same as unvisited ones and still react to hover and focus (no a:visited rule on purpose). */
+a,
+figcaption a,
+.dropbtn {
 	font-family: "Beijing SSI", arial, sans-serif;
 	color: #6C6BD0;
 	text-transform: uppercase;
@@ -243,6 +227,12 @@ a {
 	background-color: #cdd2ea;
 	margin: 0;
 	border-radius: 4px;
+}
+/* Style The Dropdown Button */
+.dropbtn {
+	display: inline-block;
+	margin: 0 0 2px;
+	cursor: pointer;
 }
 a:hover {
   	color: red;
@@ -252,19 +242,6 @@ a:focus {
 	outline-color: black;
 	color: #cdd2ea;
 	background-color: #6C6BD0;
-}
-a:visited {
-	font-family: "Beijing SSI", arial, sans-serif;
-	color: #6C6BD0;
-	text-transform: uppercase;
-	font-size: 1.2rem;
-	text-shadow: none;
-	padding-left: 4px;
-	padding-right: 4px;
-	text-decoration: none;
-	background-color: #cdd2ea;
-	margin: 0;
-	border-radius: 4px;
 }
 
 .nav h3 {
@@ -543,220 +520,22 @@ p {
 }
 
 
-.active .A-tv {
-	background: black;
-	color: red;
-}
-.active .A-audiobook {
-	background: black;
-	color: #ff6600
-}
-.active .A-licensed {
-	background: black;
-	color:#ffff00;
-}
-.active .A-game {
-	background: black;
-	color: #33ff33;
-}
-.active .A-behind {
-	background: black;
-	color: #993300;
-}
-.active .A-infinity {
-	background: black;
-	color: #33ccff;
-}
-.active .A-alternate {
-	background: black;
-	color: #cc33cc;
-}
-.active .A-notbbc {
-	background: black;
-	color: #999999;
-}
-.active .A-fanon {
-	background: black;
-	color: white;
-}
-
-.A-tv::selection {
-  background: darkblue;
-  color: red;
-  text-shadow:none;
-}
-.A-tv::-webkit-selection {
-  background: darkblue;
-  color: red;
-  text-shadow:none;
-}
-.A-tv::-moz-selection {
-  background: darkblue;
-  color: red;
-  text-shadow:none;
-}
-
-.A-audiobook::selection {
-  background: darkblue;
-  color: #ff6600;
-  text-shadow:none;
-}
-.A-audiobook::-webkit-selection {
-  background: darkblue;
-  color: #ff6600;
-  text-shadow:none;
-}
-.A-audiobook::-moz-selection {
-  background: darkblue;
-  color: #ff6600;
-  text-shadow:none;
-}
-
-.A-licensed::selection {
-  background: darkblue;
-  color: #ffff00;
-  text-shadow:none;
-}
-.A-licensed::-webkit-selection {
-  background: darkblue;
-  color: #ffff00;
-  text-shadow:none;
-}
-.A-licensed::-moz-selection {
-  background: darkblue;
-  color: #ffff00;
-  text-shadow:none;
-}
-
-.A-game::selection {
-  background: darkblue;
-  color: #33ff33;
-  text-shadow:none;
-}
-.A-game::-webkit-selection {
-  background: darkblue;
-  color: #33ff33;
-  text-shadow:none;
-}
-.A-game::-moz-selection {
-  background: darkblue;
-  color: #33ff33;
-  text-shadow:none;
-}
-
-.A-behind::selection {
-  background: darkblue;
-  color: #993300;
-  text-shadow:none;
-}
-.A-behind::-webkit-selection {
-  background: darkblue;
-  color: #993300;
-  text-shadow:none;
-}
-.A-behind::-moz-selection {
-  background: darkblue;
-  color:#993300 ;
-  text-shadow:none;
-}
-
-.A-infinity::selection {
-  background: darkblue;
-  color: #33ccff;
-  text-shadow:none;
-}
-.A-infinity::-webkit-selection {
-  background: darkblue;
-  color: #33ccff;
-  text-shadow:none;
-}
-.A-infinity::-moz-selection {
-  background: darkblue;
-  color: #33ccff;
-  text-shadow:none;
-}
-
-.A-alternate::selection {
-  background: darkblue;
-  color: #cc33cc;
-  text-shadow:none;
-}
-.A-alternate::-webkit-selection {
-  background: darkblue;
-  color: #cc33cc;
-  text-shadow:none;
-}
-.A-alternate::-moz-selection {
-  background: darkblue;
-  color: #cc33cc;
-  text-shadow:none;
-}
 
 
-.A-notbbc::selection {
-  background: darkblue;
-  color: #999999;
-  text-shadow:none;
-}
-.A-notbbc::-webkit-selection {
-  background: darkblue;
-  color: #999999;
-  text-shadow:none;
-}
-.A-notbbc::-moz-selection {
-  background: darkblue;
-  color: #999999;
-  text-shadow:none;
-}
 
 
-.A-fanon::selection {
-  background: darkblue;
-  color: white;
-  text-shadow:none;
-}
-.A-fanon::-webkit-selection {
-  background: darkblue;
-  color: white;
-  text-shadow:none;
-}
-.A-fanon::-moz-selection {
-  background: darkblue;
-  color: white;
-  text-shadow:none;
-}
+
+
+
+
+
+
+
 
 .innerlink .dropdown-content {
 	background: radial-gradient(#6C6BD0, black);
 }
 
-.innerlink .A-tv {
-  color: red;
-}
-.innerlink .A-audiobook {
-	color: #ff6600
-}
-.innerlink .A-licensed {
-	color:#ffff00;
-}
-.innerlink .A-game {
-	color: #33ff33;
-}
-.innerlink .A-behind {
-	color: #993300;
-}
-.innerlink .A-infinity {
-	color: #33ccff;
-}
-.innerlink .A-alternate {
-	color: #cc33cc;
-}
-.innerlink .A-notbbc {
-	color: #999999;
-}
-.innerlink .A-fanon {
-	color: white;
-}
 #laws ol {
 	list-style-type:upper-roman;
 }
@@ -767,12 +546,21 @@ p {
 	list-style-type:decimal;
 }
 
-#biology img {
-	height: 20rem;
+/* Section banner images (the figure at the top of each page's sub-nav). Only the height differs. */
+#biology img,
+#government img,
+#darktimes img,
+#legend img,
+#middle img,
+#preclassic img,
+#classic img,
+#prewar img,
+#postwar img {
 	text-align: left;
 	margin-left: 0;
 	padding-left: 0;
 }
+#biology img { height: 20rem; }
 
 #culture {
 	padding-top: 0;
@@ -789,54 +577,14 @@ p {
 }
 
 
-#government img {
-	height: 22rem;
-	text-align: left;
-	margin-left: 0;
-	padding-left: 0;
-}
-#darktimes img {
-	height: 20rem;
-	text-align: left;
-	margin-left: 0;
-	padding-left: 0;
-}
-#legend img {
-	height: 20rem;
-	text-align: left;
-	margin-left: 0;
-	padding-left: 0;
-}
-#middle img {
-	height: 15rem;
-	text-align: left;
-	margin-left: 0;
-	padding-left: 0;
-}
-#preclassic img {
-	height: 22rem;
-	text-align: left;
-	margin-left: 0;
-	padding-left: 0;
-}
-#classic img {
-	height: 23rem;
-	text-align: left;
-	margin-left: 0;
-	padding-left: 0;
-}
-#prewar img {
-	height: 18rem;
-	text-align: left;
-	margin-left: 0;
-	padding-left: 0;
-}
-#postwar img {
-	height: 23rem;
-	text-align: left;
-	margin-left: 0;
-	padding-left: 0;
-}
+#government img { height: 22rem; }
+#darktimes img { height: 20rem; }
+#legend img { height: 20rem; }
+#middle img { height: 15rem; }
+#preclassic img { height: 22rem; }
+#classic img { height: 23rem; }
+#prewar img { height: 18rem; }
+#postwar img { height: 23rem; }
 #craig li {
 	padding-bottom: .5rem;
 }
@@ -899,46 +647,11 @@ p {
    These rules apply only when JavaScript is NOT running, which is the case in
    Kompozer's editing view. Every page's <html> tag has class="no-js", and the
    first script on the page changes it to "js", so visitors never see this.
-   Edit mode = hidden header, source colors always on.
+   Edit mode = hidden header, source colors always on (the .no-js color rules are
+   in the SOURCE COLORS block below).
    No commenting/uncommenting needed. */
 .no-js .header {
 	display: none;
-}
-.no-js .A-tv {
-	background: black;
-	color: red;
-}
-.no-js .A-audiobook {
-	background: black;
-	color: #ff6600;
-}
-.no-js .A-licensed {
-	background: black;
-	color: #ffff00;
-}
-.no-js .A-game {
-	background: black;
-	color: #33ff33;
-}
-.no-js .A-behind {
-	background: black;
-	color: #993300;
-}
-.no-js .A-infinity {
-	background: black;
-	color: #33ccff;
-}
-.no-js .A-alternate {
-	background: black;
-	color: #cc33cc;
-}
-.no-js .A-notbbc {
-	background: black;
-	color: #999999;
-}
-.no-js .A-fanon {
-	background: black;
-	color: white;
 }
 /* ===== END KOMPOZER EDIT MODE ===== */
 
@@ -989,42 +702,60 @@ p {
 .mobile  {
 	background: black;
 }
-.mobile .A-tv {
+
+/* ===== SOURCE COLORS =====
+   Each source's color is written once here (plus once in the @media (max-width: 900px)
+   block below, where the colors are always on). Colors show:
+     .active    - after a .main block is clicked (rooscript.js toggles it)
+     .no-js     - in Kompozer's edit view (see KOMPOZER EDIT MODE)
+     .mobile    - on touch devices (the isMobile script at the top of <body>)
+     .innerlink - the color key in the navbar (color only, no black background)
+   To add a source: add a color line below, add its .active/.no-js/.mobile selectors to the
+   black-background group, and add it to ::selection, the @media block and the color key. */
+.active .A-tv, .no-js .A-tv, .mobile .A-tv, .innerlink .A-tv { color: red; }
+.active .A-audiobook, .no-js .A-audiobook, .mobile .A-audiobook, .innerlink .A-audiobook { color: #ff6600; }
+.active .A-licensed, .no-js .A-licensed, .mobile .A-licensed, .innerlink .A-licensed { color: #ffff00; }
+.active .A-game, .no-js .A-game, .mobile .A-game, .innerlink .A-game { color: #33ff33; }
+.active .A-behind, .no-js .A-behind, .mobile .A-behind, .innerlink .A-behind { color: #993300; }
+.active .A-infinity, .no-js .A-infinity, .mobile .A-infinity, .innerlink .A-infinity { color: #33ccff; }
+.active .A-alternate, .no-js .A-alternate, .mobile .A-alternate, .innerlink .A-alternate { color: #cc33cc; }
+.active .A-notbbc, .no-js .A-notbbc, .mobile .A-notbbc, .innerlink .A-notbbc { color: #999999; }
+.active .A-fanon, .no-js .A-fanon, .mobile .A-fanon, .innerlink .A-fanon { color: white; }
+.active .A-tv, .no-js .A-tv, .mobile .A-tv,
+.active .A-audiobook, .no-js .A-audiobook, .mobile .A-audiobook,
+.active .A-licensed, .no-js .A-licensed, .mobile .A-licensed,
+.active .A-game, .no-js .A-game, .mobile .A-game,
+.active .A-behind, .no-js .A-behind, .mobile .A-behind,
+.active .A-infinity, .no-js .A-infinity, .mobile .A-infinity,
+.active .A-alternate, .no-js .A-alternate, .mobile .A-alternate,
+.active .A-notbbc, .no-js .A-notbbc, .mobile .A-notbbc,
+.active .A-fanon, .no-js .A-fanon, .mobile .A-fanon {
 	background: black;
-	color: red;
 }
-.mobile .A-audiobook {
-	background: black;
-	color: #ff6600
+
+/* Selected text keeps its source color on dark blue. */
+.A-tv::selection,
+.A-audiobook::selection,
+.A-licensed::selection,
+.A-game::selection,
+.A-behind::selection,
+.A-infinity::selection,
+.A-alternate::selection,
+.A-notbbc::selection,
+.A-fanon::selection {
+	background: darkblue;
+	text-shadow: none;
 }
-.mobile .A-licensed {
-	background: black;
-	color:#ffff00;
-}
-.mobile .A-game {
-	background: black;
-	color: #33ff33;
-}
-.mobile .A-behind {
-	background: black;
-	color: #993300;
-}
-.mobile .A-infinity {
-	background: black;
-	color: #33ccff;
-}
-.mobile .A-alternate {
-	background: black;
-	color: #cc33cc;
-}
-.mobile .A-notbbc {
-	background: black;
-	color: #999999;
-}
-.mobile .A-fanon {
-	background: black;
-	color: white;
-}
+.A-tv::selection { color: red; }
+.A-audiobook::selection { color: #ff6600; }
+.A-licensed::selection { color: #ffff00; }
+.A-game::selection { color: #33ff33; }
+.A-behind::selection { color: #993300; }
+.A-infinity::selection { color: #33ccff; }
+.A-alternate::selection { color: #cc33cc; }
+.A-notbbc::selection { color: #999999; }
+.A-fanon::selection { color: white; }
+/* ===== END SOURCE COLORS ===== */
 
 
 /* This is the media modifier for overrides nessesary to make the page look good on small screen [like cell phones] */
@@ -1067,42 +798,27 @@ p {
  	#logo {
  		display: none;
  	}
- 	.A-tv {
-		background: black;
-		color: red;
-	}
-	.A-audiobook {
-		background: black;
-		color: #ff6600
-	}
-	.A-licensed {
-		background: black;
-		color:#ffff00;
-	}
-	.A-game {
-		background: black;
-		color: #33ff33;
-	}
-	.A-behind {
-		background: black;
-		color: #993300;
-	}
-	.A-infinity {
-		background: black;
-		color: #33ccff;
-	}
-	.A-alternate {
-		background: black;
-		color: #cc33cc;
-	}
-	.A-notbbc {
-		background: black;
-		color: #999999;
-	}
+	/* Source colors are always on at this width (one line per source; see SOURCE COLORS). */
+	.A-tv,
+	.A-audiobook,
+	.A-licensed,
+	.A-game,
+	.A-behind,
+	.A-infinity,
+	.A-alternate,
+	.A-notbbc,
 	.A-fanon {
 		background: black;
-		color: white;
 	}
+	.A-tv { color: red; }
+	.A-audiobook { color: #ff6600; }
+	.A-licensed { color: #ffff00; }
+	.A-game { color: #33ff33; }
+	.A-behind { color: #993300; }
+	.A-infinity { color: #33ccff; }
+	.A-alternate { color: #cc33cc; }
+	.A-notbbc { color: #999999; }
+	.A-fanon { color: white; }
 }
 @media (max-width: 600px) {
 	body {
