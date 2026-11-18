@@ -282,9 +282,7 @@ table {
 }
 
 thead th {
-		background: radial-gradient(#6C6BD0, black);
-					background: radial-gradient(black, #6C6BD0);
-
+	background: radial-gradient(black, #6C6BD0);
 }
 
 td, th {
@@ -310,10 +308,6 @@ td {
 
 }
 
-tr:nth-child(even) td {
-}
-tr:nth-child(odd) td {
-}
 caption {
   padding: 10px;
 }
@@ -355,9 +349,6 @@ caption {
 }
 .cf:after {
 	clear: both;
-}
-.cf {
-	zoom: 1;
 }
 
 .quote {
@@ -601,7 +592,6 @@ p {
 	display: flex;
 }
 .gallifreys li, .center {
-	margin: 1rem auto;
 	margin: 0;
 	padding: 1rem .5rem;
 	flex: 1 1 900px;
@@ -761,8 +751,6 @@ p {
 /* This is the media modifier for overrides nessesary to make the page look good on small screen [like cell phones] */
 
 @media (max-width: 900px) {
-	body {
-	}
 	.header {
 		display: none;
 		border: none;
