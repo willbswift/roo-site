@@ -16,6 +16,7 @@ There is no build step, no framework and no package manager. It's plain HTML, CS
 - `navbar.html` and `footer.html` are shared fragments used on every page.
 - `css/styles.css` holds the site styles; `css/normalize.css` is third-party and shouldn't be edited.
 - `javascript/rooscript.js` loads the fragments and toggles source colors.
+- `tools/check_shell.py` checks that every page's shared head and body-start match the standard (see below).
 - `images/` holds about 700 images. Extensions are mixed (`.jpg`, `.jpeg`, `.JPG`, `.png`, `.gif`, `.webp`).
 - `docwho6.html` and `roo_Dalek_Stuff_near_end.html` are very large legacy and reference files.
   Don't load them whole; grep them instead. Don't edit them unless asked.
@@ -37,19 +38,25 @@ There is no build step, no framework and no package manager. It's plain HTML, CS
   already target port 8080. If 8080 is already taken (e.g. a server in the main folder or another
   worktree), that config fails, because its args hardcode 8080 even when the preview tool picks
   another port. In that case, serve the worktree on a free port of its own. Don't stop the other server.
-- Every page shares the same `<head>`: normalize.css, the Google Fonts (Russo One, Sarpanch),
-  styles.css, the `images/rassilonicon2.png` favicon, and jQuery 4.0.0 from code.jquery.com
-  (with its `integrity` hash and `crossorigin="anonymous"`; copy the tag from an existing page).
-  Keep new pages consistent with that.
+- Every page (index.html and the roo*.html content pages) shares one standard "shell": everything
+  from `<!DOCTYPE html>` to the `isMobile` script at the top of `<body>`. It's defined in `STANDARD`
+  in `tools/check_shell.py`. In order, the `<head>` holds: charset, `<title>`, author, description,
+  viewport, normalize.css, the Google Fonts (Russo One, Sarpanch; `%7C`, not a raw `|`), styles.css,
+  the `images/rassilonicon2.png` favicon, the inline no-js swap script, then jQuery 4.0.0 from
+  code.jquery.com (with its `integrity` hash and `crossorigin="anonymous"`). Only the title, author,
+  description and `<body>` tag vary per page. There's no `<style>` block in the head.
+- After changing any page's shell, or after the author has edited pages in Kompozer, run
+  `python tools/check_shell.py`. It reports drift and never edits files. Build a new page's shell
+  by copying an existing page's, then running the check.
 - `Beijing SSI` and `CCTimelordSolid` in the styles.css font stacks are deliberately not
   embedded (commercial, no web license). They show only where installed locally, and visitors
   get the fallbacks. Don't add `@font-face` for them unless the author supplies licensed files.
-- Every page's `<html>` tag is `<html lang="en" class="no-js">`, and the first line of the inline
-  `isMobile` script is
+- Every page's `<html>` tag is `<html lang="en" class="no-js">`, and the `<head>` has an inline
+  script whose only line is
   `document.documentElement.className = document.documentElement.className.replace('no-js', 'js');`.
-  New pages need both (see Kompozer edit mode below). The `isMobile` script sits right after
-  `<body>` on content pages. It must stay in `<body>` because it writes `document.body.className`.
-  On `index.html` the swap line is in its own script in `<head>`, and the `isMobile` part is in `<body>`.
+  It comes before the jQuery tag, so the swap doesn't wait for the download. New pages need both
+  (see Kompozer edit mode below). The separate `isMobile` script sits right after `<body>`. It must stay
+  in `<body>` because it writes `document.body.className`.
 - `navbar.html` markup: each dropdown is `<li class="dropdown"><span class="dropbtn">Label</span>
   <ul class="dropdown-content"><li>…</li></ul></li>`, and the color key is
   `<li class="dropdown innerlink">`. Put only `<li>` directly inside a `<ul>`, with no `<div>` or `<br>`.
@@ -69,8 +76,8 @@ Kompozer), so the navbar and footer fragments never load there either.
   Kompozer: a hidden header and source colors that are always on.
 - In a browser the inline script swaps `no-js` for `js`, so visitors get the normal layout
   and the click-to-reveal colors.
-- Keep the swap line inline and first on the page. Moving it into `rooscript.js` (loaded at the
-  end of the page) would flash edit mode before the page switches.
+- Keep the swap line inline and as the first script on the page (in `<head>`, before jQuery). Moving it
+  into `rooscript.js` (loaded at the end of the page) would flash edit mode before the page switches.
 - Don't go back to switching modes by commenting CSS in and out (the old `321` toggles). That
   approach left stray `*/` markers that broke the live site's styles.
 - Visitors with JavaScript disabled also see edit mode. That's accepted.
