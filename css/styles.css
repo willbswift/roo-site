@@ -675,7 +675,8 @@ p {
 	border: solid 4px #cdd2ea;
 	border-radius: 20px;
 }
-#otherstide ul {
+/* The Otherstide incantation list directly follows <p id="otherstide"> (a list can't sit inside a <p>). */
+#otherstide + ul {
   list-style-type: none;
 }
 #key {
